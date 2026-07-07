@@ -1,0 +1,2938 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب الوذيناني للاستشارات الهندسية | إبداع هندسي ورؤية مستقبلية</title>
+    <meta name="description"
+        content="مكتب الوذيناني للاستشارات الهندسية – متخصصون في التصميم المعماري، الإنشائي، الإشراف الهندسي، وإدارة المشاريع بأعلى معايير الجودة.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#007ba7',
+                            600: '#00668a',
+                            700: '#005473',
+                        },
+                        dark: '#0b1f33',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11, 31, 51, 0.9) 0%, rgba(0, 123, 167, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1503387762-592dea58ef23?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007ba7;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .active-link::after {
+            width: 100%;
+        }
+
+        .testimonial-active {
+            display: block !important;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800 leading-relaxed overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <nav
+                class="glass-nav rounded-2xl shadow-lg border border-white/20 flex items-center justify-between px-6 py-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary-500 p-2 rounded-xl text-white shadow-lg shadow-primary-500/30">
+                        <img src="../img/Artboard 1.png" alt="" class="w-16 h-16 object-contain">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold text-dark tracking-tight">مكتب الوذيناني</span>
+                        <span class="text-[10px] font-bold text-primary-500 uppercase tracking-widest -mt-1">للاستشارات
+                            الهندسية</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8 font-bold text-sm text-gray-600">
+                    <li><a href="../index.html" class="nav-link hover:text-primary-500 transition">الرئيسية</a></li>
+                    <li><a href="../about/" class="nav-link hover:text-primary-500 transition">من نحن</a></li>
+                    <li><a href="../services/" class="nav-link hover:text-primary-500 transition">خدماتنا</a></li>
+                    <li><a href="#" class="nav-link active-link  hover:text-primary-500 transition">مشاريعنا</a></li>
+
+                    <li><a href="../contact/" class="nav-link hover:text-primary-500 transition">اتصل بنا</a></li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="#contact"
+                        class="hidden md:flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-primary-500/40">
+                        <span>اطلب استشارة</span>
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </a>
+                    <button id="mobile-menu-btn"
+                        class="lg:hidden text-dark p-2 hover:bg-gray-100 rounded-lg transition">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-dark/60 backdrop-blur-sm z-50">
+            <div class="absolute top-0 right-0 h-full w-3/4 bg-white shadow-2xl p-8 flex flex-col">
+                <div class="flex items-center justify-between mb-12">
+                    <span class="text-xl font-bold text-dark">القائمة</span>
+                    <button id="close-menu-btn" class="text-gray-500 p-2 hover:bg-gray-100 rounded-lg">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col gap-6 text-lg font-bold text-gray-700">
+                    <li><a href="../index.html" class="mobile-nav-link">الرئيسية</a></li>
+                    <li><a href="../about/" class="mobile-nav-link">من نحن</a></li>
+                    <li><a href="../services/" class="mobile-nav-link">خدماتنا</a></li>
+                    <li><a href="../projects/" class="mobile-nav-link">مشاريعنا</a></li>
+
+                    <li><a href="../contact/" class="mobile-nav-link text-primary-500">تواصل معنا</a></li>
+                </ul>
+                <div class="mt-auto pt-8 border-t">
+                    <p class="text-sm text-gray-500 mb-4">تابعنا على:</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="instagram"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="twitter"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="facebook"
+                                class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Hero Section -->
+    <section id="projects-hero" class="min-h-[80vh] flex items-center pt-20 relative overflow-hidden">
+        <!-- Background Slideshow -->
+        <div class="absolute inset-0 z-0">
+            <div id="projectsSlider" class="w-full h-full relative">
+                <!-- Slide 1 -->
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
+                    style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
+                    style="background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
+                    style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <!-- Slide 4 -->
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
+                    style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                </div>
+            </div>
+
+            <!-- Fog Overlay -->
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, 
+            rgba(10, 25, 47, 0.4) 0%, 
+            rgba(10, 25, 47, 0.7) 40%, 
+            rgba(10, 25, 47, 0.85) 70%, 
+            rgba(10, 25, 47, 0.95) 100%);">
+            </div>
+
+            <!-- Additional Fog Effect -->
+            <div class="absolute inset-0 opacity-50" style="background: 
+            radial-gradient(ellipse at 20% 50%, rgba(30, 58, 95, 0.4) 0%, transparent 60%),
+            radial-gradient(ellipse at 80% 50%, rgba(30, 58, 95, 0.3) 0%, transparent 60%),
+            radial-gradient(ellipse at 50% 100%, rgba(10, 25, 47, 0.5) 0%, transparent 50%);">
+            </div>
+
+            <!-- Texture Overlay -->
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Breadcrumb -->
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full text-white/80 text-sm mb-8"
+                    data-aos="fade-up">
+                    <a href="#home" class="hover:text-white transition-colors">الرئيسية</a>
+                    <i data-lucide="chevron-left" class="w-3 h-3"></i>
+                    <span class="text-white font-bold">مشاريعنا</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-6"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-primary-500">إبداعاتنا</span>
+                    <br class="hidden sm:block">
+                    <span class="text-white">تتحدث عن نفسها</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up"
+                    data-aos-delay="200">
+                    نفتخر بتقديم مجموعة من المشاريع المميزة التي تعكس خبرتنا وجودتنا في التصميم والتنفيذ، من المباني
+                    السكنية إلى المراكز التجارية
+                </p>
+
+                <!-- Divider -->
+                <div class="flex justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="300">
+                    <span class="w-16 h-1 rounded-full bg-primary-500"></span>
+                    <span class="w-8 h-1 rounded-full bg-primary-500"></span>
+                    <span class="w-4 h-1 rounded-full bg-white/20"></span>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12" data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
+                        <span class="block text-3xl font-black text-white mb-1 counter" data-target="320">0</span>
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">مشروع منجز</span>
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
+                        <span class="block text-3xl font-black text-white mb-1 counter" data-target="180">0</span>
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">عميل راضٍ</span>
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
+                        <span class="block text-3xl font-black text-white mb-1 counter" data-target="25">0</span>
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">سنة خبرة</span>
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
+                        <span class="block text-3xl font-black text-white mb-1">98<span class="text-xl">%</span></span>
+                        <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">رضا العملاء</span>
+                    </div>
+                </div>
+
+                <!-- Project Categories -->
+                <div class="flex flex-wrap justify-center gap-3 mt-10" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#projects"
+                        class="px-5 py-2.5 bg-primary-500 text-white rounded-full text-sm font-bold transition-all shadow-lg shadow-primary-500/30 hover:bg-primary-600">
+                        الكل
+                    </a>
+                    <a href="#projects"
+                        class="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 rounded-full text-sm font-bold transition-all hover:bg-white/10 hover:text-white">
+                        معماري
+                    </a>
+                    <a href="#projects"
+                        class="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 rounded-full text-sm font-bold transition-all hover:bg-white/10 hover:text-white">
+                        سكني
+                    </a>
+                    <a href="#projects"
+                        class="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 rounded-full text-sm font-bold transition-all hover:bg-white/10 hover:text-white">
+                        تجاري
+                    </a>
+                    <a href="#projects"
+                        class="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 rounded-full text-sm font-bold transition-all hover:bg-white/10 hover:text-white">
+                        داخلي
+                    </a>
+                    <a href="#projects"
+                        class="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 rounded-full text-sm font-bold transition-all hover:bg-white/10 hover:text-white">
+                        تنسيق مواقع
+                    </a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mt-10" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#gallery"
+                        class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary-500/30 flex items-center gap-2 group">
+                        <span>استعرض مشاريعنا</span>
+                        <i data-lucide="grid" class="w-5 h-5 group-hover:rotate-90 transition-transform"></i>
+                    </a>
+                    <a href="#contact"
+                        class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all flex items-center gap-2">
+                        <span>نفذ مشروعك معنا</span>
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 z-10">
+            <span class="text-[8px] uppercase tracking-[0.3em] font-bold">اكتشف إبداعاتنا</span>
+            <div class="w-1 h-10 rounded-full bg-white/10 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-primary-500 animate-[scroll_2s_infinite]"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Projects Hero Section Background Slideshow
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('#projectsSlider .slide');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // Show first slide
+            slides[0].classList.remove('opacity-0');
+            slides[0].classList.add('opacity-100');
+
+            function changeSlide() {
+                // Hide current slide
+                slides[currentIndex].classList.remove('opacity-100');
+                slides[currentIndex].classList.add('opacity-0');
+
+                // Move to next slide
+                currentIndex = (currentIndex + 1) % totalSlides;
+
+                // Show next slide
+                slides[currentIndex].classList.remove('opacity-0');
+                slides[currentIndex].classList.add('opacity-100');
+            }
+
+            // Change slide every 3 seconds
+            setInterval(changeSlide, 3000);
+        });
+
+        // Counter Animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.counter');
+
+            const animateCounter = (counter) => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = Math.max(1, Math.floor(target / 50));
+                let current = 0;
+
+                const update = () => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        return;
+                    }
+                    counter.textContent = current;
+                    requestAnimationFrame(() => setTimeout(update, 30));
+                };
+
+                update();
+            };
+
+            // Start counters when in viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        });
+    </script>
+
+    <style>
+        /* Smooth transitions for slides */
+        #projectsSlider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Keep existing animations */
+        @keyframes scroll {
+            0% {
+                top: -50%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* Counter numbers */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Project category buttons */
+        #projects-hero .hover\:bg-white\/10:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+
+    <script>
+        // Hero Section Background Slideshow
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('#heroSlider .slide');
+            const thumbnail = document.getElementById('heroThumbnail');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // Array of thumbnail images matching slides
+            const thumbnailImages = [
+                './img/hero-1.jpg',
+                './img/hero-2.jpg',
+                './img/hero-3.jpg',
+                './img/hero-4.jpg',
+
+            ];
+
+            // Show first slide
+            slides[0].classList.remove('opacity-0');
+            slides[0].classList.add('opacity-100');
+
+            function changeSlide() {
+                // Hide current slide
+                slides[currentIndex].classList.remove('opacity-100');
+                slides[currentIndex].classList.add('opacity-0');
+
+                // Move to next slide
+                currentIndex = (currentIndex + 1) % totalSlides;
+
+                // Show next slide
+                slides[currentIndex].classList.remove('opacity-0');
+                slides[currentIndex].classList.add('opacity-100');
+
+                // Update thumbnail with fade effect
+                if (thumbnail) {
+                    thumbnail.classList.add('opacity-0');
+                    setTimeout(() => {
+                        thumbnail.src = thumbnailImages[currentIndex];
+                        thumbnail.classList.remove('opacity-0');
+                    }, 300);
+                }
+            }
+
+            // Change slide every 3 seconds
+            setInterval(changeSlide, 3000);
+        });
+    </script>
+
+    <style>
+        /* Smooth transitions for slides */
+        #heroSlider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+
+        #heroThumbnail {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Keep your existing animations */
+        @keyframes scroll {
+            0% {
+                top: -50%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+
+
+    <!-- Projects Showcase Section - Full Width Cards -->
+    <section id="projects-showcase" class="py-16 bg-white relative overflow-hidden">
+        <!-- Decorative Background -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-3 bg-primary-50 border border-primary-100 px-6 py-2.5 rounded-full mb-5">
+                    <i data-lucide="grid" class="w-4 h-4 text-primary-500"></i>
+                    <span class="text-primary-600 text-xs font-bold tracking-wider">مشاريعنا المميزة</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black text-dark mb-3">
+                    أحدث <span
+                        class="text-primary-500">إبداعاتنا</span>
+                    الهندسية
+                </h2>
+                <p class="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
+                    نقدم لكم مجموعة من مشاريعنا المنجزة التي تعكس خبرتنا وجودتنا في التصميم والتنفيذ
+                </p>
+                <div class="flex justify-center gap-2 mt-4">
+                    <span class="w-10 h-0.5 rounded-full bg-primary-500"></span>
+                    <span class="w-5 h-0.5 rounded-full bg-primary-500"></span>
+                    <span class="w-3 h-0.5 rounded-full bg-gray-300"></span>
+                </div>
+            </div>
+
+            <!-- Projects Cards - Full Width -->
+            <div class="space-y-6">
+
+                <!-- Project 1 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                    data-aos="fade-up">
+                    <div class="grid lg:grid-cols-3 min-h-[280px]">
+                        <!-- Image Side - 40% -->
+                        <div class="lg:col-span-1 relative overflow-hidden bg-gray-900">
+                            <div class="project-slider w-full h-full relative">
+                                <!-- Slide 1 -->
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/hospital-1.png');">
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/hospital-2.png');">
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/hospital-3.png');">
+                                </div>
+                                <!-- Slide 4 -->
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/hospital-4.png');">
+                                </div>
+
+                                <!-- Gradient Overlay -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                </div>
+
+                                <!-- Slide Controls - Bottom -->
+                                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="0"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="1"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="2"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="3"></span>
+                                </div>
+
+                                <!-- Navigation Arrows -->
+                                <button
+                                    class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                </button>
+                                <button
+                                    class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </button>
+
+                                <!-- Category Badge -->
+                                <div
+                                    class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                    معماري
+                                </div>
+
+                                <!-- Slide Counter -->
+                                <div
+                                    class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                    <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Side - 60% -->
+                        <div class="lg:col-span-2 p-6 md:p-8 flex flex-col justify-center bg-white">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع
+                                    طبي</span>
+                                <span class="w-6 h-px bg-primary-200"></span>
+                                <span class="text-[10px] text-gray-400">#P002</span>
+                            </div>
+
+                            <h3 class="text-2xl md:text-3xl font-black text-dark mb-2 leading-tight">
+                                مستشفى الحياة الوطني – الطائف
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+                                يُعد مشروع <strong>مستشفى الحياة الوطني – الطائف</strong> أحد أبرز المشاريع الطبية
+                                الخاصة التي تهدف إلى تعزيز خدمات الرعاية الصحية بمحافظة الطائف، من خلال إنشاء منشأة طبية
+                                متكاملة متعددة التخصصات تحمل علامة "الحياة الوطني" المعروفة بجودة خدماتها الصحية. يأتي
+                                المشروع ضمن خطة التوسع الجغرافي للمجموعة لتلبية الطلب المتزايد على الخدمات الطبية،
+                                والمساهمة في رفع جودة الحياة وتوفير بيئة علاجية حديثة وفق أعلى المعايير الطبية
+                                والهندسية، بما يتوافق مع مستهدفات رؤية المملكة العربية السعودية 2030 وبرنامج تحول القطاع
+                                الصحي الذي يدعم زيادة مساهمة القطاع الخاص في تقديم خدمات الرعاية الصحية.
+                            </p>
+
+                            <!-- Project Details -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">مساحة البناء</span>
+                                    <span class="text-sm font-bold text-dark">35,042.9 م²</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">عدد الطوابق</span>
+                                    <span class="text-sm font-bold text-dark">13 + 2 بدروم</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">السعة</span>
+                                    <span class="text-sm font-bold text-dark">350 سرير</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">الموقع</span>
+                                    <span class="text-sm font-bold text-dark">الطائف</span>
+                                </div>
+                            </div>
+
+                            <!-- Tags & Buttons -->
+                            <div class="flex flex-wrap items-center justify-between gap-3">
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span
+                                        class="text-[10px] bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full">مستشفى
+                                        متعدد التخصصات</span>
+                                    <span class="text-[10px] bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full">13
+                                        طابق</span>
+                                    <span
+                                        class="text-[10px] bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full">350
+                                        سرير</span>
+                                    <span
+                                        class="text-[10px] bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full">رؤية
+                                        2030</span>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <a href="#"
+                                        class="inline-flex items-center gap-1.5 bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-xl font-bold text-xs transition-all shadow-lg shadow-primary-500/30 group/btn">
+                                        <span>تفاصيل</span>
+                                        <i
+                                            class="fa-solid fa-arrow-left text-xs group-hover/btn:-translate-x-1 transition-transform"></i>
+                                    </a>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="grid lg:grid-cols-3 min-h-[280px]">
+                        <!-- Image Side -->
+                        <div class="lg:col-span-1 relative overflow-hidden bg-gray-900">
+                            <div class="project-slider w-full h-full relative">
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial-1.png');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial-2.png');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial-3.png');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial-4.png');">
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                </div>
+
+                                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="0"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="1"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="2"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="3"></span>
+                                </div>
+
+                                <button
+                                    class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                </button>
+                                <button
+                                    class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </button>
+
+                                <div
+                                    class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                    تجاري
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                    <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Side -->
+                        <div class="lg:col-span-2 p-6 md:p-8 flex flex-col justify-center bg-white">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع
+                                    تجاري</span>
+                                <span class="w-6 h-px bg-primary-500-200"></span>
+                                <span class="text-[10px] text-gray-400">#P003</span>
+                            </div>
+
+                            <h3 class="text-2xl md:text-3xl font-black text-dark mb-2 leading-tight">
+                                المجمع التجاري – الطائف
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+                                يهدف مشروع <strong>المجمع التجاري – الطائف</strong> إلى إنشاء وجهة تجارية حديثة تضم
+                                مجموعة متنوعة من المحلات التجارية والخدمية، بما يسهم في دعم الحركة الاقتصادية وتوفير
+                                بيئة استثمارية جاذبة في إحدى المناطق الحيوية بمحافظة الطائف. يتميز المشروع بتصميم معماري
+                                عصري يعكس الهوية العمرانية الحديثة، مع واجهات تجارية مميزة ومرافق خدمية متكاملة توفر
+                                تجربة تسوق مريحة للزوار. كما يضم المشروع وحدات تجارية متعددة الأنشطة، ومواقف سيارات
+                                مباشرة، وممرات حركة آمنة ومنظمة، بما يضمن سهولة الوصول إلى المحلات ويرفع من الكفاءة
+                                التشغيلية والقيمة الاستثمارية للمشروع، وذلك تماشياً مع مستهدفات رؤية المملكة 2030 وبرامج
+                                التنمية الاقتصادية الداعمة للقطاع الخاص.
+                            </p>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">نوع المشروع</span>
+                                    <span class="text-sm font-bold text-dark">مجمع تجاري</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">الوحدات</span>
+                                    <span class="text-sm font-bold text-dark">محلات متعددة</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">المرافق</span>
+                                    <span class="text-sm font-bold text-dark">مواقف وخدمات</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">الموقع</span>
+                                    <span class="text-sm font-bold text-dark">الطائف</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-3">
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[10px] bg-primary-500/10 text-primary-500-600 px-2.5 py-1 rounded-full">مجمع
+                                        تجاري</span>
+                                    <span
+                                        class="text-[10px] bg-primary-500/10 text-primary-500-600 px-2.5 py-1 rounded-full">واجهات
+                                        حديثة</span>
+                                    <span class="text-[10px] bg-primary-500/10 text-primary-500-600 px-2.5 py-1 rounded-full">بيئة
+                                        استثمارية</span>
+                                    <span class="text-[10px] bg-primary-500/10 text-primary-500-600 px-2.5 py-1 rounded-full">رؤية
+                                        2030</span>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <a href="#"
+                                        class="inline-flex items-center gap-1.5 bg-primary-500 hover:bg-primary-500-600 text-white px-4 py-2 rounded-xl font-bold text-xs transition-all shadow-lg shadow-accent/30 group/btn">
+                                        <span>تفاصيل</span>
+                                        <i
+                                            class="fa-solid fa-arrow-left text-xs group-hover/btn:-translate-x-1 transition-transform"></i>
+                                    </a>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="grid lg:grid-cols-3 min-h-[280px]">
+                        <!-- Image Side -->
+                        <div class="lg:col-span-1 relative overflow-hidden bg-gray-900">
+                            <div class="project-slider w-full h-full relative">
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial1.jpeg');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial2.jpeg');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial3.jpeg');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Commercial4.jpeg');">
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                </div>
+
+                                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="0"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="1"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="2"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="3"></span>
+                                </div>
+
+                                <button
+                                    class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                </button>
+                                <button
+                                    class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </button>
+
+                                <div
+                                    class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                    سكني
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                    <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Side -->
+                        <div class="lg:col-span-2 p-6 md:p-8 flex flex-col justify-center bg-white">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع
+                                    تجاري</span>
+                                <span class="w-6 h-px bg-green-200"></span>
+                                <span class="text-[10px] text-gray-400">#P004</span>
+                            </div>
+
+                            <h3 class="text-2xl md:text-3xl font-black text-dark mb-2 leading-tight">
+                                المجمع التجاري
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+                                تتمثل فكرة مشروع <strong>المجمع التجاري</strong> في إنشاء مركز تجاري حديث يضم مجموعة
+                                متنوعة من المحلات التجارية، ليكون وجهة متكاملة للتسوق والخدمات تلبي احتياجات سكان
+                                المنطقة والزوار. يستفيد المشروع من موقعه الاستراتيجي على شوارع رئيسية واسعة، مما يعزز
+                                الحركة التجارية ويضمن سهولة الوصول إلى مختلف الوحدات الاستثمارية، مع توفير بيئة تسوق
+                                مريحة وعصرية تلبي متطلبات الأنشطة التجارية الحديثة.
+                            </p>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+                                يتكون المشروع من مجمع تجاري متكامل يضم عدداً من الوحدات التجارية المستقلة، موزعة حول
+                                ساحات وممرات داخلية منظمة تسهل حركة الزوار وتمنح المشروع طابعاً حضارياً مميزاً. كما يشمل
+                                المشروع مواقف سيارات واسعة، ومساحات خضراء، وعناصر تنسيق موقع حديثة، إلى جانب واجهات
+                                معمارية عصرية تحقق أفضل استغلال للموقع وترفع من القيمة الاستثمارية للمشروع، مما يجعله من
+                                المشاريع التجارية المتميزة مقارنة بالمشاريع المماثلة.
+                            </p>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">
+                                تأتي أهمية المشروع انسجاماً مع مستهدفات <strong>رؤية المملكة العربية السعودية
+                                    2030</strong> التي تسعى إلى دعم التنمية الاقتصادية وتعزيز مساهمة القطاع الخاص في
+                                الاستثمار والتطوير العمراني. كما يسهم المشروع في تنشيط الحركة التجارية، وتوفير فرص
+                                استثمارية واعدة، وتحسين المشهد الحضري، وتقديم مرافق تجارية حديثة تلبي احتياجات المجتمع،
+                                بما يحقق قيمة اقتصادية واجتماعية مستدامة للمنطقة.
+                            </p>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">نوع المشروع</span>
+                                    <span class="text-sm font-bold text-dark">مجمع تجاري</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">المرافق</span>
+                                    <span class="text-sm font-bold text-dark">محلات ومواقف</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">التصميم</span>
+                                    <span class="text-sm font-bold text-dark">واجهات عصرية</span>
+                                </div>
+
+                                <div class="bg-gray-50 rounded-xl p-3">
+                                    <span class="block text-[10px] text-gray-400 font-bold">الرؤية</span>
+                                    <span class="text-sm font-bold text-dark">رؤية 2030</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-3">
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">مجمع
+                                        تجاري</span>
+                                    <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">محلات
+                                        متنوعة</span>
+                                    <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">مواقف
+                                        سيارات</span>
+                                    <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">رؤية
+                                        2030</span>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <a href="#"
+                                        class="inline-flex items-center gap-1.5 bg-primary-500 hover:bg-primary-500 text-white px-4 py-2 rounded-xl font-bold text-xs transition-all shadow-lg shadow-green-500/30 group/btn">
+                                        <span>تفاصيل</span>
+                                        <i
+                                            class="fa-solid fa-arrow-left text-xs group-hover/btn:-translate-x-1 transition-transform"></i>
+                                    </a>
+
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Two Projects Side by Side -->
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+                    <!-- Project 4 - Commercial -->
+                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="grid grid-rows-2 min-h-[480px]">
+                            <!-- Image Side -->
+                            <div class="relative overflow-hidden bg-gray-900">
+                                <div class="project-slider w-full h-full relative">
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/Coffee-shop-1.png');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/Coffee-shop-2.png');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/Coffee-shop-3.png');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/Coffee-shop-4.png');">
+                                    </div>
+
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                    </div>
+
+                                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="0"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="1"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="2"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="3"></span>
+                                    </div>
+
+                                    <button
+                                        class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                    </button>
+                                    <button
+                                        class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                    </button>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                        تجاري
+                                    </div>
+                                    <div
+                                        class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                        <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Side -->
+                            <div class="p-5 md:p-6 flex flex-col justify-center bg-white overflow-y-auto">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع
+                                        ضيافة</span>
+                                    <span class="w-6 h-px bg-green-200"></span>
+                                    <span class="text-[10px] text-gray-400">#P005</span>
+                                </div>
+
+                                <h3 class="text-xl md:text-2xl font-black text-dark mb-2 leading-tight">
+                                     كوفي شوب – الطائف
+                                </h3>
+
+                                <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+                                    يتمثل المشروع في إنشاء <strong>مقهى عصري بمحافظة الطائف</strong> يتميز بتصميم معماري
+                                    حديث يجمع بين الأناقة والراحة، مع مساحات ضيافة داخلية وخارجية راقية توفر أجواءً
+                                    مميزة للزوار. ويهدف المشروع إلى تقديم تجربة استثنائية لعشاق القهوة والمشروبات
+                                    المتخصصة، من خلال بيئة عصرية تلبي تطلعات مختلف الفئات وتواكب أحدث مفاهيم الضيافة.
+                                </p>
+
+                                <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+                                    يضم المقهى جلسات متنوعة، ومناطق خارجية مريحة، وخدمات متكاملة، مع تصميم يراعي جودة
+                                    الحركة وسهولة الاستخدام، بالإضافة إلى واجهات حديثة ولمسات معمارية تعزز من الهوية
+                                    البصرية للمشروع، بما يواكب تطور قطاع الضيافة والترفيه في المملكة العربية السعودية.
+                                </p>
+
+                                <div class="grid grid-cols-2 gap-2 mb-2">
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">نوع المشروع</span>
+                                        <span class="text-xs font-bold text-dark">مقهى عصري</span>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">الموقع</span>
+                                        <span class="text-xs font-bold text-dark">الطائف</span>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">التصميم</span>
+                                        <span class="text-xs font-bold text-dark">حديث وعصري</span>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">النشاط</span>
+                                        <span class="text-xs font-bold text-dark">ضيافة ومشروبات</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+                                    <div class="flex flex-wrap gap-1">
+                                        <span
+                                            class="text-[9px] bg-green-50 text-primary-500 px-2 py-0.5 rounded-full">مقهى
+                                            عصري</span>
+                                        <span
+                                            class="text-[9px] bg-green-50 text-primary-500 px-2 py-0.5 rounded-full">جلسات
+                                            داخلية وخارجية</span>
+                                        <span
+                                            class="text-[9px] bg-green-50 text-primary-500 px-2 py-0.5 rounded-full">قهوة
+                                            مختصة</span>
+                                    </div>
+
+                                    <div class="flex gap-1.5">
+                                        <a href="#"
+                                            class="inline-flex items-center gap-1 bg-primary-500 hover:bg-primary-500 text-white px-3 py-1.5 rounded-xl font-bold text-[10px] transition-all shadow-lg shadow-green-500/30 group/btn">
+                                            <span>تفاصيل</span>
+                                            <i
+                                                class="fa-solid fa-arrow-left text-[10px] group-hover/btn:-translate-x-1 transition-transform"></i>
+                                        </a>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 - Residential -->
+                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                        data-aos="fade-up" data-aos-delay="250">
+                        <div class="grid grid-rows-2 min-h-[480px]">
+                            <!-- Image Side -->
+                            <div class="relative overflow-hidden bg-gray-900">
+                                <div class="project-slider w-full h-full relative">
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/building1.png');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/building2.png');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/building3.png');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/building4.png');">
+                                    </div>
+
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                    </div>
+
+                                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="0"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="1"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="2"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="3"></span>
+                                    </div>
+
+                                    <button
+                                        class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                    </button>
+                                    <button
+                                        class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                    </button>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                        سكني
+                                    </div>
+                                    <div
+                                        class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                        <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Side -->
+                            <div class="p-5 md:p-6 flex flex-col justify-center bg-white overflow-y-auto">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">مشروع
+                                        سكني</span>
+                                    <span class="w-6 h-px bg-blue-200"></span>
+                                    <span class="text-[10px] text-gray-400">#P006</span>
+                                </div>
+
+                                <h3 class="text-xl md:text-2xl font-black text-dark mb-2 leading-tight">
+                                    مبنى سكني دور واحد
+                                </h3>
+
+                                <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+                                    <strong>مبنى سكني دور واحد</strong> يتميز بتصميم معماري عصري يراعي متطلبات الأسرة
+                                    الحديثة، ويهدف إلى توفير بيئة سكنية مريحة وعملية تجمع بين الأناقة وسهولة الاستخدام.
+                                    يعتمد المشروع على توزيع داخلي مدروس يحقق الاستغلال الأمثل للمساحات مع توفير أعلى
+                                    مستويات الخصوصية والراحة للسكان.
+                                </p>
+
+                                <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+                                    يضم المبنى جميع الفراغات السكنية الأساسية بتصميم متوازن يشمل غرف النوم، ومناطق
+                                    المعيشة، والمجلس، والمطبخ، والخدمات المساندة، مع الاهتمام بالإضاءة الطبيعية والتهوية
+                                    الجيدة، واستخدام حلول معمارية حديثة تعزز جودة الحياة وتحقق الكفاءة في استغلال
+                                    المساحات.
+                                </p>
+
+                                <div class="grid grid-cols-2 gap-2 mb-2">
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">نوع المشروع</span>
+                                        <span class="text-xs font-bold text-dark">مبنى سكني</span>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">عدد الأدوار</span>
+                                        <span class="text-xs font-bold text-dark">دور واحد</span>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">التصميم</span>
+                                        <span class="text-xs font-bold text-dark">عصري</span>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-xl p-2">
+                                        <span class="block text-[9px] text-gray-400 font-bold">الاستخدام</span>
+                                        <span class="text-xs font-bold text-dark">سكني</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap items-center justify-between gap-2">
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="text-[9px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">دور
+                                            واحد</span>
+                                        <span class="text-[9px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">تصميم
+                                            عصري</span>
+                                        <span
+                                            class="text-[9px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">استغلال
+                                            المساحات</span>
+                                    </div>
+
+                                    <div class="flex gap-1.5">
+                                        <a href="#"
+                                            class="inline-flex items-center gap-1 bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 rounded-xl font-bold text-[10px] transition-all shadow-lg shadow-blue-500/30 group/btn">
+                                            <span>تفاصيل</span>
+                                            <i
+                                                class="fa-solid fa-arrow-left text-[10px] group-hover/btn:-translate-x-1 transition-transform"></i>
+                                        </a>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                  <!-- Project 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="grid lg:grid-cols-3 min-h-[280px]">
+                        <!-- Image Side -->
+                        <div class="lg:col-span-1 relative overflow-hidden bg-gray-900">
+                            <div class="project-slider w-full h-full relative">
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Systems1.png');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Systems2.png');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Systems3.png');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/Systems4.png');">
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                </div>
+
+                                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="0"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="1"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="2"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="3"></span>
+                                </div>
+
+                                <button
+                                    class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                </button>
+                                <button
+                                    class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </button>
+
+                                <div
+                                    class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                    سكني
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                    <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                </div>
+                            </div>
+                        </div>
+
+                      <!-- Content Side -->
+<div class="lg:col-span-2 p-6 md:p-8 flex flex-col justify-center bg-white">
+    <div class="flex items-center gap-3 mb-2">
+        <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع سلامة</span>
+        <span class="w-6 h-px bg-green-200"></span>
+        <span class="text-[10px] text-gray-400">#P007</span>
+    </div>
+
+    <h3 class="text-2xl md:text-3xl font-black text-dark mb-2 leading-tight">
+        أنظمة الحماية من الحريق للأكشاك
+    </h3>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+        يهدف مشروع <strong>أنظمة الحماية من الحريق للأكشاك الموسمية بمحافظة الطائف</strong> إلى توفير بيئة آمنة للزوار والعاملين، من خلال تطبيق أحدث أنظمة السلامة والوقاية من الحريق وفق متطلبات كود البناء السعودي وكود الحريق، بما يضمن حماية الأرواح والممتلكات والحد من المخاطر المحتملة أثناء تشغيل الأكشاك الموسمية.
+    </p>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+        يشمل المشروع تصميم وتنفيذ أنظمة متكاملة للسلامة، تتضمن أنظمة الإنذار المبكر، وطفايات الحريق، ومخارج الطوارئ، ولوحات الإرشاد، بالإضافة إلى تجهيزات الوقاية التي تحقق أعلى معايير السلامة المعتمدة. كما يراعي المشروع سهولة التشغيل والصيانة مع ضمان توافق جميع الأنظمة مع الاشتراطات التنظيمية والجهات المختصة.
+    </p>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">
+        يسهم المشروع في رفع مستوى السلامة العامة داخل مواقع الأكشاك الموسمية، ويعزز من جاهزية المواقع للتعامل مع حالات الطوارئ، بما يحقق بيئة آمنة ومستدامة تتماشى مع مستهدفات رؤية المملكة العربية السعودية 2030 في تحسين جودة الحياة وتعزيز معايير الأمن والسلامة.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">نوع المشروع</span>
+            <span class="text-sm font-bold text-dark">أنظمة سلامة</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">النظام</span>
+            <span class="text-sm font-bold text-dark">مكافحة الحريق</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">الموقع</span>
+            <span class="text-sm font-bold text-dark">الطائف</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">المعايير</span>
+            <span class="text-sm font-bold text-dark">كود الحريق</span>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap gap-1.5">
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">أنظمة إنذار</span>
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">مكافحة الحريق</span>
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">سلامة عامة</span>
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">رؤية 2030</span>
+        </div>
+
+        <div class="flex gap-2">
+            <a href="#"
+                class="inline-flex items-center gap-1.5 bg-primary-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl font-bold text-xs transition-all shadow-lg shadow-green-500/30 group/btn">
+                <span>تفاصيل</span>
+                <i class="fa-solid fa-arrow-left text-xs group-hover/btn:-translate-x-1 transition-transform"></i>
+            </a>
+
+            
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+                  <!-- Project 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="grid lg:grid-cols-3 min-h-[280px]">
+                        <!-- Image Side -->
+                        <div class="lg:col-span-1 relative overflow-hidden bg-gray-900">
+                            <div class="project-slider w-full h-full relative">
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/villa1.jpeg');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/villa2.jpeg');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/villa3.jpeg');">
+                                </div>
+                                <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                    style="background-image: url('../img/villa4.jpeg');">
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                </div>
+
+                                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="0"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="1"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="2"></span>
+                                    <span
+                                        class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                        data-index="3"></span>
+                                </div>
+
+                                <button
+                                    class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                </button>
+                                <button
+                                    class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </button>
+
+                                <div
+                                    class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                    سكني
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                    <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                </div>
+                            </div>
+                        </div>
+
+                      <!-- Content Side -->
+                       <div class="lg:col-span-2 p-6 md:p-8 flex flex-col justify-center bg-white">
+    <div class="flex items-center gap-3 mb-2">
+        <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع سكني</span>
+        <span class="w-6 h-px bg-green-200"></span>
+        <span class="text-[10px] text-gray-400">#P008</span>
+    </div>
+
+    <h3 class="text-2xl md:text-3xl font-black text-dark mb-2 leading-tight">
+        فيلا سكنية فاخرة
+    </h3>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+        <strong>فيلا سكنية فاخرة</strong> بتصميم معماري حديث يجمع بين الأناقة والراحة، ويعكس مفهوماً متطوراً للسكن العصري من خلال توزيع داخلي مدروس واستغلال مثالي للمساحات، مع الاهتمام بأدق التفاصيل المعمارية والتشطيبات عالية الجودة، لتوفير بيئة سكنية راقية تلبي احتياجات الأسرة الحديثة.
+    </p>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-3 max-w-3xl">
+        تضم الفيلا مساحات داخلية وخارجية متكاملة تشمل غرف معيشة واسعة، ومجلساً للاستقبال، وغرف نوم مريحة، ومطبخاً عصرياً، بالإضافة إلى جلسات خارجية ومسبح خاص وحدائق ومنطقة ترفيهية، مع مرافق خدمية متنوعة توفر أعلى مستويات الراحة والخصوصية للسكان.
+    </p>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">
+        تم تصميم المشروع وفق أحدث المعايير الهندسية والمعمارية، مع استخدام مواد وتشطيبات عالية الجودة وأنظمة حديثة تضمن كفاءة التشغيل والاستدامة، ليقدم نموذجاً متكاملاً للحياة السكنية الفاخرة التي تجمع بين الجمال والوظيفة وجودة التنفيذ.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">نوع المشروع</span>
+            <span class="text-sm font-bold text-dark">فيلا سكنية</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">التصميم</span>
+            <span class="text-sm font-bold text-dark">عصري فاخر</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">المرافق</span>
+            <span class="text-sm font-bold text-dark">مسبح وجلسات</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-3">
+            <span class="block text-[10px] text-gray-400 font-bold">الجودة</span>
+            <span class="text-sm font-bold text-dark">تشطيبات فاخرة</span>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap gap-1.5">
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">فيلا فاخرة</span>
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">مسبح خاص</span>
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">جلسات خارجية</span>
+            <span class="text-[10px] bg-green-50 text-primary-500 px-2.5 py-1 rounded-full">تصميم عصري</span>
+        </div>
+
+        <div class="flex gap-2">
+            <a href="#"
+                class="inline-flex items-center gap-1.5 bg-primary-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl font-bold text-xs transition-all shadow-lg shadow-green-500/30 group/btn">
+                <span>تفاصيل</span>
+                <i class="fa-solid fa-arrow-left text-xs group-hover/btn:-translate-x-1 transition-transform"></i>
+            </a>
+
+            
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                  <!-- Two Projects Side by Side -->
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+                    <!-- Project 4 - Commercial -->
+                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="grid grid-rows-2 min-h-[480px]">
+                            <!-- Image Side -->
+                            <div class="relative overflow-hidden bg-gray-900">
+                                <div class="project-slider w-full h-full relative">
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/school.jpeg');">
+                                    </div>
+                                    
+
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                    </div>
+
+                                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="0"></span>
+                                       
+                                    </div>
+
+                                    <button
+                                        class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                    </button>
+                                    <button
+                                        class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                    </button>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                        تجاري
+                                    </div>
+                                    <div
+                                        class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                        <span class="current-slide-num">01</span>/<span class="total-slides">01</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <!-- Content Side -->
+<div class="p-5 md:p-6 flex flex-col justify-center bg-white overflow-y-auto">
+    <div class="flex items-center gap-3 mb-2">
+        <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider">مشروع سلامة</span>
+        <span class="w-6 h-px bg-green-200"></span>
+        <span class="text-[10px] text-gray-400">#P009</span>
+    </div>
+
+    <h3 class="text-xl md:text-2xl font-black text-dark mb-2 leading-tight">
+        مدرسة قالون للطفولة المبكرة
+    </h3>
+
+    <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+        يتمثل المشروع في <strong>تنفيذ واعتماد أنظمة السلامة والحماية من الحريق لمدرسة قالون للطفولة المبكرة</strong>، بهدف توفير بيئة تعليمية آمنة تضمن حماية الطلاب والعاملين، من خلال تطبيق أعلى معايير السلامة وفق اشتراطات كود البناء السعودي ومتطلبات الدفاع المدني.
+    </p>
+
+    <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+        شمل المشروع فحص واختبار أنظمة الإنذار المبكر، وأنظمة الإطفاء، ومخارج الطوارئ، ووسائل السلامة الكهربائية، بالإضافة إلى التحقق من كفاءة جميع التجهيزات واعتمادها بما يضمن جاهزيتها للتعامل مع حالات الطوارئ وتحقيق أعلى مستويات الحماية داخل المنشأة التعليمية.
+    </p>
+
+    <div class="grid grid-cols-2 gap-2 mb-2">
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">نوع المشروع</span>
+            <span class="text-xs font-bold text-dark">أنظمة سلامة</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">المنشأة</span>
+            <span class="text-xs font-bold text-dark">مدرسة</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">الخدمات</span>
+            <span class="text-xs font-bold text-dark">إنذار وإطفاء</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">الاعتماد</span>
+            <span class="text-xs font-bold text-dark">الدفاع المدني</span>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between gap-2">
+        <div class="flex flex-wrap gap-1">
+            <span class="text-[9px] bg-green-50 text-primary-500 px-2 py-0.5 rounded-full">أنظمة إنذار</span>
+            <span class="text-[9px] bg-green-50 text-primary-500 px-2 py-0.5 rounded-full">مكافحة الحريق</span>
+            <span class="text-[9px] bg-green-50 text-primary-500 px-2 py-0.5 rounded-full">بيئة تعليمية آمنة</span>
+        </div>
+
+        <div class="flex gap-1.5">
+            <a href="#"
+                class="inline-flex items-center gap-1 bg-primary-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-xl font-bold text-[10px] transition-all shadow-lg shadow-green-500/30 group/btn">
+                <span>تفاصيل</span>
+                <i class="fa-solid fa-arrow-left text-[10px] group-hover/btn:-translate-x-1 transition-transform"></i>
+            </a>
+
+           
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 - Residential -->
+                    <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                        data-aos="fade-up" data-aos-delay="250">
+                        <div class="grid grid-rows-2 min-h-[480px]">
+                            <!-- Image Side -->
+                            <div class="relative overflow-hidden bg-gray-900">
+                                <div class="project-slider w-full h-full relative">
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/villa-1.jpeg');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/villa-2.jpeg');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/villa-3.jpeg');">
+                                    </div>
+                                    <div class="project-slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0"
+                                        style="background-image: url('../img/villa-4.jpeg');">
+                                    </div>
+
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent">
+                                    </div>
+
+                                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="0"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="1"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="2"></span>
+                                        <span
+                                            class="slide-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all hover:bg-white/80"
+                                            data-index="3"></span>
+                                    </div>
+
+                                    <button
+                                        class="prev-slide absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                    </button>
+                                    <button
+                                        class="next-slide absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/50 transition-all z-20 opacity-0 group-hover:opacity-100 text-sm">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                    </button>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-20">
+                                        سكني
+                                    </div>
+                                    <div
+                                        class="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full z-20">
+                                        <span class="current-slide-num">01</span>/<span class="total-slides">04</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <!-- Content Side -->
+<div class="p-5 md:p-6 flex flex-col justify-center bg-white overflow-y-auto">
+    <div class="flex items-center gap-3 mb-2">
+        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">مشروع سكني</span>
+        <span class="w-6 h-px bg-blue-200"></span>
+        <span class="text-[10px] text-gray-400">#P010</span>
+    </div>
+
+    <h3 class="text-xl md:text-2xl font-black text-dark mb-2 leading-tight">
+        فيلا سكنية راقية
+    </h3>
+
+    <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+        <strong>فيلا سكنية راقية</strong> بتصميم معماري أنيق يجمع بين الطابع العصري واللمسات الكلاسيكية، حيث تم تصميم المشروع بعناية ليحقق التوازن بين الجمال المعماري والوظائف العملية، مع الاهتمام بأدق التفاصيل التي توفر أسلوب حياة راقياً يناسب متطلبات الأسرة الحديثة.
+    </p>
+
+    <p class="text-gray-600 text-xs leading-relaxed mb-2 max-w-3xl">
+        تضم الفيلا مساحات معيشية واسعة تشمل مجلساً فاخراً، وصالات استقبال، وغرف نوم مريحة، ومطبخاً حديثاً، بالإضافة إلى مرافق متكاملة مثل الجلسات الخارجية والحدائق الخاصة ومواقف السيارات، مع توزيع داخلي يضمن سهولة الحركة ويوفر أعلى مستويات الراحة والخصوصية لجميع أفراد الأسرة.
+    </p>
+
+    <div class="grid grid-cols-2 gap-2 mb-2">
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">نوع المشروع</span>
+            <span class="text-xs font-bold text-dark">فيلا سكنية</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">التصميم</span>
+            <span class="text-xs font-bold text-dark">عصري وكلاسيكي</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">المرافق</span>
+            <span class="text-xs font-bold text-dark">حدائق وجلسات</span>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-2">
+            <span class="block text-[9px] text-gray-400 font-bold">الاستخدام</span>
+            <span class="text-xs font-bold text-dark">سكني</span>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between gap-2">
+        <div class="flex flex-wrap gap-1">
+            <span class="text-[9px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">فيلا فاخرة</span>
+            <span class="text-[9px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">تصميم أنيق</span>
+            <span class="text-[9px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">خصوصية وراحة</span>
+        </div>
+
+        <div class="flex gap-1.5">
+            <a href="#"
+                class="inline-flex items-center gap-1 bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 rounded-xl font-bold text-[10px] transition-all shadow-lg shadow-blue-500/30 group/btn">
+                <span>تفاصيل</span>
+                <i class="fa-solid fa-arrow-left text-[10px] group-hover/btn:-translate-x-1 transition-transform"></i>
+            </a>
+
+           
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <!-- View All Projects -->
+            <div class="text-center mt-10" data-aos="fade-up">
+                <a href="#gallery"
+                    class="group inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-8 py-3.5 rounded-2xl font-bold text-sm transition-all shadow-xl shadow-primary-500/30">
+                    <span>جميع المشاريع</span>
+                    <i data-lucide="grid" class="w-4 h-4 group-hover:rotate-90 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Project Slider Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const sliders = document.querySelectorAll('.project-slider');
+
+            sliders.forEach((slider) => {
+                const slides = slider.querySelectorAll('.project-slide');
+                const dots = slider.querySelectorAll('.slide-dot');
+                const prevBtn = slider.querySelector('.prev-slide');
+                const nextBtn = slider.querySelector('.next-slide');
+                const currentNum = slider.querySelector('.current-slide-num');
+                const totalSlides = slides.length;
+                let currentIndex = 0;
+                let slideInterval;
+
+                // Show first slide
+                slides[0].classList.remove('opacity-0');
+                slides[0].classList.add('opacity-100');
+                if (dots[0]) dots[0].classList.add('bg-white');
+                if (currentNum) currentNum.textContent = '01';
+
+                function goToSlide(index) {
+                    slides.forEach(slide => {
+                        slide.classList.remove('opacity-100');
+                        slide.classList.add('opacity-0');
+                    });
+
+                    slides[index].classList.remove('opacity-0');
+                    slides[index].classList.add('opacity-100');
+
+                    dots.forEach(dot => dot.classList.remove('bg-white'));
+                    if (dots[index]) dots[index].classList.add('bg-white');
+
+                    if (currentNum) {
+                        currentNum.textContent = String(index + 1).padStart(2, '0');
+                    }
+
+                    currentIndex = index;
+                }
+
+                function nextSlide() {
+                    const next = (currentIndex + 1) % totalSlides;
+                    goToSlide(next);
+                }
+
+                function prevSlide() {
+                    const prev = (currentIndex - 1 + totalSlides) % totalSlides;
+                    goToSlide(prev);
+                }
+
+                function startAutoPlay() {
+                    if (slideInterval) clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 4000);
+                }
+
+                function stopAutoPlay() {
+                    if (slideInterval) {
+                        clearInterval(slideInterval);
+                        slideInterval = null;
+                    }
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        stopAutoPlay();
+                        nextSlide();
+                        startAutoPlay();
+                    });
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        stopAutoPlay();
+                        prevSlide();
+                        startAutoPlay();
+                    });
+                }
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        stopAutoPlay();
+                        goToSlide(index);
+                        startAutoPlay();
+                    });
+                });
+
+                const card = slider.closest('.group');
+                if (card) {
+                    card.addEventListener('mouseenter', stopAutoPlay);
+                    card.addEventListener('mouseleave', startAutoPlay);
+                }
+
+                startAutoPlay();
+            });
+        });
+    </script>
+
+    <style>
+        /* Projects Showcase Styles */
+        .rounded-3xl {
+            border-radius: 1.5rem;
+        }
+
+        /* Project slider transitions */
+        .project-slide {
+            transition: opacity 0.7s ease-in-out;
+        }
+
+        /* Slide dots */
+        .slide-dot {
+            transition: all 0.3s ease;
+        }
+
+        .slide-dot.bg-white {
+            background: white !important;
+            width: 16px;
+            border-radius: 4px;
+        }
+
+        /* Navigation arrows visibility */
+        .group:hover .opacity-0 {
+            opacity: 1 !important;
+        }
+
+        /* Responsive */
+
+
+        @media (max-width: 768px) {
+            .rounded-3xl {
+                border-radius: 1rem;
+            }
+
+            .p-6 {
+                padding: 1rem;
+            }
+
+            .md\:p-8 {
+                padding: 1.25rem;
+            }
+
+            .project-slider {
+                min-height: 200px;
+            }
+
+            .grid-cols-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .sm\:grid-cols-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+
+            .md\:text-3xl {
+                font-size: 1.5rem;
+            }
+
+            .flex-wrap {
+                gap: 0.5rem;
+            }
+
+            .justify-between {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+
+
+    <!-- Process Section - Unique Design -->
+    <section id="process" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decorative Background -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500/3 rounded-full blur-3xl">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-3 bg-primary-50 border border-primary-100 px-6 py-3 rounded-full mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-primary-500 animate-pulse"></span>
+                    <span class="text-primary-600 text-sm font-bold tracking-wider">كيف نعمل معاً</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">
+                    رحلة نجاحك تبدأ <br>
+                    <span class="text-transparent bg-clip-text bg-primary-500">بخمس خطوات</span>
+                </h2>
+                <p class="text-gray-500 text-lg leading-relaxed">
+                    نتبع منهجية عمل متكاملة تضمن تحقيق رؤيتك بأعلى معايير الجودة والاحترافية
+                </p>
+                <div class="flex justify-center gap-2 mt-6">
+                    <span class="w-12 h-1 rounded-full bg-primary-500"></span>
+                    <span class="w-6 h-1 rounded-full bg-primary-500"></span>
+                    <span class="w-3 h-1 rounded-full bg-gray-300"></span>
+                </div>
+            </div>
+
+            <!-- Process Timeline - Unique Design -->
+            <div class="relative">
+                <!-- Central Line -->
+                <div
+                    class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 via-accent to-primary-500 transform -translate-x-1/2 hidden lg:block">
+                    <div
+                        class="absolute top-0 -left-2 w-5 h-5 bg-primary-500 rounded-full border-4 border-white shadow-lg shadow-primary-500/30">
+                    </div>
+                    <div
+                        class="absolute bottom-0 -left-2 w-5 h-5 bg-primary-500 rounded-full border-4 border-white shadow-lg shadow-primary-500/30">
+                    </div>
+                </div>
+
+                <!-- Mobile Progress Bar -->
+                <div class="lg:hidden w-full h-1 bg-gray-200 rounded-full mb-12 overflow-hidden">
+                    <div class="h-full w-full bg-primary-500 rounded-full animate-progress"></div>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative mb-12 lg:mb-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="lg:flex items-center">
+                        <div class="lg:w-1/2 lg:pr-16 lg:text-right order-2 lg:order-1">
+                            <div class="lg:ml-auto lg:max-w-md">
+                                <div
+                                    class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-primary-200 group relative overflow-hidden">
+                                    <!-- Glow Effect -->
+                                    <div
+                                        class="absolute -top-20 -right-20 w-40 h-40 bg-primary-500/5 rounded-full blur-2xl group-hover:bg-primary-500/10 transition-all">
+                                    </div>
+
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-4 mb-4 lg:flex-row-reverse">
+                                            <div
+                                                class="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg shadow-primary-500/30 shrink-0">
+                                                <i data-lucide="users" class="w-7 h-7 text-white"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-primary-500 font-bold text-sm">الخطوة الأولى</span>
+                                                <h3 class="text-xl font-black text-dark">فهم رؤيتك</h3>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-500 leading-relaxed">
+                                            نبدأ بالاستماع إلى احتياجاتك وأهدافك لتحديد رؤيتك بدقة، ونحرص على فهم كل
+                                            التفاصيل الصغيرة والكبيرة التي تشكل مشروعك المثالي.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2 lg:justify-end">
+                                            <span
+                                                class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">استشارة
+                                                أولية</span>
+                                            <span
+                                                class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">تحليل
+                                                احتياجات</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center lg:justify-start order-1 lg:order-2 mt-4 lg:mt-0">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center shadow-2xl shadow-primary-500/30 relative z-20">
+                                <span class="text-2xl font-black text-white">01</span>
+                                <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative mb-12 lg:mb-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="lg:flex items-center">
+                        <div class="lg:w-1/2 lg:pl-16 order-2">
+                            <div class="lg:mr-auto lg:max-w-md">
+                                <div
+                                    class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-accent-200 group relative overflow-hidden">
+                                    <div
+                                        class="absolute -top-20 -left-20 w-40 h-40 bg-primary-500/5 rounded-full blur-2xl group-hover:bg-primary-500/10 transition-all">
+                                    </div>
+
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-4 mb-4">
+                                            <div
+                                                class="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg shadow-accent/30 shrink-0">
+                                                <i data-lucide="pen-tool" class="w-7 h-7 text-white"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-primary-500 font-bold text-sm">الخطوة الثانية</span>
+                                                <h3 class="text-xl font-black text-dark">تصميم مبتكر</h3>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-500 leading-relaxed">
+                                            نضع حلول تصميمية مخصصة تجمع بين الجمال والوظيفة، نبتكر تصاميم تعكس هويتك
+                                            وتلبي تطلعاتك بأسلوب فريد ومتميز.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2">
+                                            <span
+                                                class="text-xs bg-primary-500/10 text-primary-500-600 px-3 py-1 rounded-full">تصاميم
+                                                مخصصة</span>
+                                            <span
+                                                class="text-xs bg-primary-500/10 text-primary-500-600 px-3 py-1 rounded-full">عروض
+                                                3D</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-1 mt-4 lg:mt-0">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center shadow-2xl shadow-accent/30 relative z-20">
+                                <span class="text-2xl font-black text-white">02</span>
+                                <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative mb-12 lg:mb-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="lg:flex items-center">
+                        <div class="lg:w-1/2 lg:pr-16 lg:text-right order-2 lg:order-1">
+                            <div class="lg:ml-auto lg:max-w-md">
+                                <div
+                                    class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-200 group relative overflow-hidden">
+                                    <div
+                                        class="absolute -top-20 -right-20 w-40 h-40 bg-primary-500/5 rounded-full blur-2xl group-hover:bg-primary-500/10 transition-all">
+                                    </div>
+
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-4 mb-4 lg:flex-row-reverse">
+                                            <div
+                                                class="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg shadow-primary-500/30 shrink-0">
+                                                <i data-lucide="clipboard" class="w-7 h-7 text-white"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-primary-500 font-bold text-sm">الخطوة الثالثة</span>
+                                                <h3 class="text-xl font-black text-dark">التخطيط التفصيلي</h3>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-500 leading-relaxed">
+                                            نقوم بإعداد خطط دقيقة لضمان تنفيذ المشروع بسلاسة، نشمل كل التفاصيل الفنية
+                                            والجدول الزمني والميزانية المقترحة.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2 lg:justify-end">
+                                            <span
+                                                class="text-xs bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full">خطط
+                                                تنفيذية</span>
+                                            <span
+                                                class="text-xs bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full">جداول
+                                                زمنية</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center lg:justify-start order-1 lg:order-2 mt-4 lg:mt-0">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center shadow-2xl shadow-primary-500/30 relative z-20">
+                                <span class="text-2xl font-black text-white">03</span>
+                                <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative mb-12 lg:mb-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="lg:flex items-center">
+                        <div class="lg:w-1/2 lg:pl-16 order-2">
+                            <div class="lg:mr-auto lg:max-w-md">
+                                <div
+                                    class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 group relative overflow-hidden">
+                                    <div
+                                        class="absolute -top-20 -left-20 w-40 h-40 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/10 transition-all">
+                                    </div>
+
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-4 mb-4">
+                                            <div
+                                                class="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg shadow-orange-500/30 shrink-0">
+                                                <i data-lucide="activity" class="w-7 h-7 text-white"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-primary-500 font-bold text-sm">الخطوة الرابعة</span>
+                                                <h3 class="text-xl font-black text-dark">إدارة التنفيذ</h3>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-500 leading-relaxed">
+                                            نراقب كل مرحلة من مراحل المشروع لضمان الجودة والمواعيد، نتابع التنفيذ بدقة
+                                            ونضمن التزام المقاولين بالمواصفات.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2">
+                                            <span
+                                                class="text-xs bg-orange-50 text-orange-600 px-3 py-1 rounded-full">متابعة
+                                                ميدانية</span>
+                                            <span
+                                                class="text-xs bg-orange-50 text-orange-600 px-3 py-1 rounded-full">ضبط
+                                                جودة</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-1 mt-4 lg:mt-0">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center shadow-2xl shadow-orange-500/30 relative z-20">
+                                <span class="text-2xl font-black text-white">04</span>
+                                <div class="absolute -inset-1 bg-orange-500/20 rounded-2xl blur-xl -z-10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="500">
+                    <div class="lg:flex items-center">
+                        <div class="lg:w-1/2 lg:pr-16 lg:text-right order-2 lg:order-1">
+                            <div class="lg:ml-auto lg:max-w-md">
+                                <div
+                                    class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-primary-200 hover:border-primary-400 group relative overflow-hidden">
+                                    <!-- Special Celebration Effect -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent/5">
+                                    </div>
+                                    <div
+                                        class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-500/10 to-accent/10 rounded-full blur-2xl">
+                                    </div>
+
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-4 mb-4 lg:flex-row-reverse">
+                                            <div
+                                                class="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg shadow-primary-500/30 shrink-0 relative">
+                                                <i data-lucide="check-circle" class="w-7 h-7 text-white"></i>
+                                                <div
+                                                    class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10 animate-pulse">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="text-primary-500 font-bold text-sm">الخطوة الخامسة</span>
+                                                <h3 class="text-xl font-black text-dark">التسليم والمتابعة</h3>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-500 leading-relaxed">
+                                            نسلم المشروع النهائي مع دعم مستمر لضمان رضاك الكامل. نقدم لك كامل الملفات
+                                            والوثائق ونبقى على تواصل لدعمك بعد التسليم.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2 lg:justify-end">
+                                            <span
+                                                class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">تسليم
+                                                متكامل</span>
+                                            <span
+                                                class="text-xs bg-primary-500/10 text-primary-500-600 px-3 py-1 rounded-full">دعم
+                                                ما بعد التسليم</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center lg:justify-start order-1 lg:order-2 mt-4 lg:mt-0">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center shadow-2xl shadow-primary-500/30 relative z-20">
+                                <span class="text-2xl font-black text-white">05</span>
+                                <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connecting Dots - Mobile -->
+                <div class="lg:hidden flex justify-center gap-2 mt-8">
+                    <span class="w-3 h-3 rounded-full bg-primary-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-primary-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-primary-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-primary-500"></span>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-20" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-3 bg-gradient-to-r from-primary-500/10 to-accent/10 rounded-3xl p-8 border border-primary-200">
+                    <div class="text-right">
+                        <p class="text-dark font-bold text-lg">جاهز لبدء رحلة النجاح؟</p>
+                        <p class="text-gray-500 text-sm">نحن هنا لتحويل رؤيتك إلى واقع</p>
+                    </div>
+                    <a href="#contact"
+                        class="group bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold transition-all shadow-xl shadow-primary-500/30 flex items-center gap-2">
+                        <span>ابدأ الآن</span>
+                        <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Process Section Animations */
+            @keyframes progress {
+                from {
+                    width: 0%;
+                }
+
+                to {
+                    width: 100%;
+                }
+            }
+
+            .animate-progress {
+                animation: progress 3s ease-in-out infinite;
+            }
+
+            /* Card hover effects */
+            #process .group:hover .group-hover\:border-primary-200 {
+                border-color: #93C5FD;
+            }
+
+            #process .group:hover .group-hover\:border-accent-200 {
+                border-color: #6EE7B7;
+            }
+
+            #process .group:hover .group-hover\:border-indigo-200 {
+                border-color: #A5B4FC;
+            }
+
+            #process .group:hover .group-hover\:border-orange-200 {
+                border-color: #FDBA74;
+            }
+
+            /* Shadow effects */
+            #process .shadow-xl {
+                box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+            }
+
+            #process .group:hover .shadow-2xl {
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Step number circles */
+            #process .w-16.h-16 {
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            #process .group:hover~.w-16.h-16 {
+                transform: scale(1.1);
+            }
+
+            /* Responsive */
+            @media (max-width: 1024px) {
+                #process .lg\:flex {
+                    flex-direction: column !important;
+                }
+
+                #process .lg\:w-1\/2 {
+                    width: 100% !important;
+                }
+
+                #process .lg\:pr-16,
+                #process .lg\:pl-16 {
+                    padding: 0 !important;
+                }
+
+                #process .lg\:text-right {
+                    text-align: right !important;
+                }
+
+                #process .lg\:justify-start,
+                #process .lg\:justify-end {
+                    justify-content: center !important;
+                }
+
+                #process .lg\:ml-auto,
+                #process .lg\:mr-auto {
+                    margin: 0 auto !important;
+                }
+
+                #process .lg\:max-w-md {
+                    max-width: 100% !important;
+                }
+
+                #process .lg\:order-1,
+                #process .lg\:order-2 {
+                    order: 0 !important;
+                }
+
+                #process .lg\:flex-row-reverse {
+                    flex-direction: row !important;
+                }
+            }
+        </style>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-primary-500 font-bold text-sm uppercase tracking-[0.3em] mb-4 block">آراء
+                        العملاء</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-dark mb-8">شركاء النجاح <br> يتحدثون عن تجربتهم</h2>
+                    <p class="text-gray-500 text-lg mb-10">نفخر بثقة عملائنا التي بنيناها على مدار سنوات من العمل الجاد
+                        والالتزام بالتميز.</p>
+                    <div class="flex gap-4">
+                        <button id="prev-testimonial"
+                            class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-dark hover:bg-primary-500 hover:text-white transition-all">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+                        <button id="next-testimonial"
+                            class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-dark hover:bg-primary-500 hover:text-white transition-all">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div id="testimonial-container" class="relative z-10">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="testimonial-slide testimonial-active hidden bg-slate-50 p-10 md:p-16 rounded-[3rem] shadow-sm">
+                            <div class="text-primary-500 mb-6 flex gap-1">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 text-xl italic mb-10 leading-relaxed">
+                                "مكتب الوذيناني أنجز مشروع فيلتي باحترافية عالية، والتزام بالجدول الزمني. ما يميزهم هو
+                                اهتمامهم بأدق التفاصيل المعمارية التي جعلت من منزلي تحفة فنية."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client"
+                                    class="w-16 h-16 rounded-2xl object-cover">
+                                <div>
+                                    <h4 class="text-xl font-bold text-dark">أحمد الغامدي</h4>
+                                    <p class="text-gray-400 text-sm">الرياض، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide hidden bg-slate-50 p-10 md:p-16 rounded-[3rem] shadow-sm">
+                            <div class="text-primary-500 mb-6 flex gap-1">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 text-xl italic mb-10 leading-relaxed">
+                                "سعدت جداً بالتعامل مع فريق العمل، التصميم الداخلي كان يفوق التوقعات وجمع بين العصرية
+                                والراحة. فريق محترف يستحق كل التقدير."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client"
+                                    class="w-16 h-16 rounded-2xl object-cover">
+                                <div>
+                                    <h4 class="text-xl font-bold text-dark">نورة الشهراني</h4>
+                                    <p class="text-gray-400 text-sm">جدة، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decoration -->
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-primary-500 rounded-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer - Premium Design -->
+
+    <footer class="relative bg-dark text-white overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl">
+            </div>
+        </div>
+
+        <!-- Top Wave Shape -->
+        <div class="relative z-10">
+            <svg class="w-full h-20 text-white" viewBox="0 0 1440 100" fill="currentColor" preserveAspectRatio="none">
+                <path d="M0,40 C240,100 480,0 720,40 C960,80 1200,20 1440,40 L1440,100 L0,100 Z"></path>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+
+                <!-- Column 1: Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent flex items-center justify-center shadow-lg shadow-primary-500/30">
+                                <img src="../img/Artboard 1.png" alt="" class="w-16 h-16 rounded-xl">
+                            </div>
+                            <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
+                        </div>
+                        <span class="text-2xl font-black text-white">مكتب الوذيناني</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6 max-w-sm">
+                        نحن لسنا مجرد مكتب هندسي، بل شركاء في بناء المستقبل. نقدم حلولاً تجمع بين الكفاءة والجمال
+                        والاستدامة.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Badge -->
+                    <div class="mt-6 flex items-center gap-4 bg-white/5 rounded-2xl px-4 py-3 border border-white/5">
+                        <div class="flex text-yellow-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">تقييم 4.9 من 180 عميل</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                        <span class="w-8 h-0.5 bg-primary-500"></span>
+                        روابط سريعة
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#home"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-400">الرئيسية</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-400">من نحن</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-400">خدماتنا</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#gallery"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-400">معرض الأعمال</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-400">تواصل معنا</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h4 class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                        <span class="w-8 h-0.5 bg-primary-500"></span>
+                        خدماتنا
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-500">التصميم المعماري</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-500">التصميم الإنشائي</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-500">الإشراف الهندسي</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-500">إصدار التراخيص</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                                <i data-lucide="chevron-left"
+                                    class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                                <span class="group-hover:text-primary-500">استشارات السلامة</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div>
+                    <h4 class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                        <span class="w-8 h-0.5 bg-primary-500"></span>
+                        معلومات الاتصال
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+                                <i class="fa-solid fa-phone text-primary-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500">هاتف</span>
+                                <a href="tel:+966500000000" class="font-bold hover:text-primary-400 transition-colors">
+                                    +966 50 000 0000
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+                                <i class="fa-solid fa-envelope text-primary-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500">البريد الإلكتروني</span>
+                                <a href="mailto:info@alwadhnani.com"
+                                    class="font-bold hover:text-primary-400 transition-colors">
+                                    info@alwadhnani.com
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+                                <i class="fa-solid fa-location-dot text-primary-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500">العنوان</span>
+                                <span class="font-bold">الدمام - حي المحمدية</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Newsletter -->
+                    <div class="mt-6">
+                        <p class="text-xs text-gray-500 mb-2">اشترك في نشرتنا البريدية</p>
+                        <div class="flex gap-2">
+                            <input type="email" placeholder="بريدك الإلكتروني"
+                                class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-all text-sm">
+                            <button
+                                class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2.5 rounded-xl font-bold transition-all hover:shadow-lg hover:shadow-primary-500/30 text-sm">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="pt-8 pb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <p class="text-gray-500 text-sm">
+                        © 2025 <span class="text-white font-bold">مكتب الوذيناني</span> للاستشارات الهندسية.
+                        <span class="hidden sm:inline">جميع الحقوق محفوظة.</span>
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+                        <i data-lucide="shield" class="w-3 h-3"></i>
+                        سياسة الخصوصية
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+                        <i data-lucide="file-text" class="w-3 h-3"></i>
+                        الشروط والأحكام
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+                        <i data-lucide="globe" class="w-3 h-3"></i>
+                        English
+                    </a>
+                </div>
+
+                <!-- Back to Top -->
+                <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+                    class="w-10 h-10 rounded-full bg-primary-500 hover:bg-primary-600 text-white flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30 group">
+                    <i data-lucide="chevron-up" class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform"></i>
+                </button>
+            </div>
+
+            <!-- Bottom Decorative Line -->
+            <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-primary-500/30 to-transparent mt-2"></div>
+        </div>
+
+        <style>
+            /* Footer Styles */
+            footer {
+                background: #0A192F;
+            }
+
+            /* Wave shape */
+            footer svg {
+                transform: rotate(180deg);
+                margin-bottom: -1px;
+            }
+
+            /* Social icons hover */
+            footer .hover\:scale-110:hover {
+                transform: scale(1.1);
+            }
+
+            /* Newsletter input focus */
+            footer input:focus {
+                border-color: #2563EB;
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            }
+
+            /* Smooth transitions */
+            footer .transition-all {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            /* Link hover effect */
+            footer .hover\:translate-x-1:hover {
+                transform: translateX(-4px);
+            }
+
+            /* Back to top button */
+            footer button[onclick] {
+                cursor: pointer;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                footer .grid {
+                    gap: 2rem;
+                }
+
+                footer .md\:flex-row {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                footer .flex-wrap {
+                    justify-content: center;
+                }
+
+                footer .hidden.sm\:inline {
+                    display: none;
+                }
+            }
+        </style>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top"
+        class="fixed bottom-8 left-8 w-14 h-14 bg-primary-500 text-white rounded-2xl shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-primary-600">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        };
+
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'translate-y-10');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'translate-y-10');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counters Animation
+        const counters = document.querySelectorAll('.counter');
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + speed);
+                    setTimeout(animateCounters, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Trigger counters when in view
+        const statsSection = document.getElementById('home');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.unobserve(statsSection);
+            }
+        });
+        observer.observe(statsSection);
+
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        let currentTestimonial = 0;
+
+        const showTestimonial = (index) => {
+            testimonials.forEach(t => t.classList.remove('testimonial-active'));
+            testimonials[index].classList.add('testimonial-active');
+        };
+
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        // Filter Projects
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Active button
+                filterBtns.forEach(b => b.classList.remove('active', 'bg-primary-500', 'text-white'));
+                filterBtns.forEach(b => b.classList.add('bg-gray-100', 'text-gray-600'));
+                btn.classList.add('active', 'bg-primary-500', 'text-white');
+                btn.classList.remove('bg-gray-100', 'text-gray-600');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

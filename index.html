@@ -19,7 +19,8 @@
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script>
         tailwind.config = {
             theme: {
@@ -117,12 +118,12 @@
 
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center gap-8 font-bold text-sm text-gray-600">
-                    <li><a href="#home" class="nav-link active-link hover:text-primary-500 transition">الرئيسية</a></li>
-                    <li><a href="#about" class="nav-link hover:text-primary-500 transition">من نحن</a></li>
-                    <li><a href="#services" class="nav-link hover:text-primary-500 transition">خدماتنا</a></li>
-                    <li><a href="#projects" class="nav-link hover:text-primary-500 transition">مشاريعنا</a></li>
+                    <li><a href="#" class="nav-link active-link hover:text-primary-500 transition">الرئيسية</a></li>
+                    <li><a href="./about/" class="nav-link hover:text-primary-500 transition">من نحن</a></li>
+                    <li><a href="./services/" class="nav-link hover:text-primary-500 transition">خدماتنا</a></li>
+                    <li><a href="./projects/" class="nav-link hover:text-primary-500 transition">مشاريعنا</a></li>
                     <li><a href="#process" class="nav-link hover:text-primary-500 transition">آلية العمل</a></li>
-                    <li><a href="#contact" class="nav-link hover:text-primary-500 transition">اتصل بنا</a></li>
+                    <li><a href="./contact/" class="nav-link hover:text-primary-500 transition">اتصل بنا</a></li>
                 </ul>
 
                 <div class="flex items-center gap-4">
@@ -147,12 +148,12 @@
                     </button>
                 </div>
                 <ul class="flex flex-col gap-6 text-lg font-bold text-gray-700">
-                    <li><a href="#home" class="mobile-nav-link">الرئيسية</a></li>
-                    <li><a href="#about" class="mobile-nav-link">من نحن</a></li>
-                    <li><a href="#services" class="mobile-nav-link">خدماتنا</a></li>
-                    <li><a href="#projects" class="mobile-nav-link">مشاريعنا</a></li>
+                    <li><a href="#" class="mobile-nav-link">الرئيسية</a></li>
+                    <li><a href="./about/" class="mobile-nav-link">من نحن</a></li>
+                    <li><a href="./services/" class="mobile-nav-link">خدماتنا</a></li>
+                    <li><a href="./projects/" class="mobile-nav-link">مشاريعنا</a></li>
                     <li><a href="#process" class="mobile-nav-link">آلية العمل</a></li>
-                    <li><a href="#contact" class="mobile-nav-link text-primary-500">تواصل معنا</a></li>
+                    <li><a href="./contact/" class="mobile-nav-link text-primary-500">تواصل معنا</a></li>
                 </ul>
                 <div class="mt-auto pt-8 border-t">
                     <p class="text-sm text-gray-500 mb-4">تابعنا على:</p>
@@ -2872,8 +2873,8 @@
             <div class="lg:col-span-1">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="relative">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-500 to-accent flex items-center justify-center shadow-lg shadow-primary-500/30">
-                            <i data-lucide="building-2" class="w-6 h-6 text-white"></i>
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent flex items-center justify-center shadow-lg shadow-primary-500/30">
+                            <img src="./img/Artboard 1.png" alt="" class="w-16 h-16 rounded-xl">
                         </div>
                         <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
                     </div>
@@ -2884,23 +2885,27 @@
                 </p>
                 
                 <!-- Social Media -->
-                <div class="flex gap-3">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
-                        <i data-lucide="twitter" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
-                        <i data-lucide="instagram" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
-                        <i data-lucide="facebook" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
-                        <i data-lucide="youtube" class="w-4 h-4"></i>
-                    </a>
-                </div>
+                              <div class="flex gap-3">
+    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+        <i class="fa-brands fa-x-twitter text-lg"></i>
+    </a>
+
+    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+        <i class="fa-brands fa-instagram text-lg"></i>
+    </a>
+
+    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+        <i class="fa-brands fa-facebook-f text-lg"></i>
+    </a>
+
+    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+        <i class="fa-brands fa-linkedin-in text-lg"></i>
+    </a>
+
+    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+        <i class="fa-brands fa-youtube text-lg"></i>
+    </a>
+</div>
 
                 <!-- Trust Badge -->
                 <div class="mt-6 flex items-center gap-4 bg-white/5 rounded-2xl px-4 py-3 border border-white/5">
@@ -3001,35 +3006,41 @@
                     <span class="w-8 h-0.5 bg-primary-500"></span>
                     معلومات الاتصال
                 </h4>
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
-                            <i data-lucide="phone" class="w-4 h-4 text-primary-500"></i>
-                        </div>
-                        <div>
-                            <span class="block text-xs text-gray-500">هاتف</span>
-                            <a href="tel:+966500000000" class="font-bold hover:text-primary-400 transition-colors">+966 50 000 0000</a>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
-                            <i data-lucide="mail" class="w-4 h-4 text-primary-500"></i>
-                        </div>
-                        <div>
-                            <span class="block text-xs text-gray-500">البريد الإلكتروني</span>
-                            <a href="mailto:info@alwadhnani.com" class="font-bold hover:text-primary-400 transition-colors">info@alwadhnani.com</a>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
-                        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-primary-500"></i>
-                        </div>
-                        <div>
-                            <span class="block text-xs text-gray-500">العنوان</span>
-                            <span class="font-bold">الدمام - حي المحمدية</span>
-                        </div>
-                    </li>
-                </ul>
+               <ul class="space-y-4">
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-phone text-primary-500 text-lg"></i>
+        </div>
+        <div>
+            <span class="block text-xs text-gray-500">هاتف</span>
+            <a href="tel:+966500000000" class="font-bold hover:text-primary-400 transition-colors">
+                +966 50 000 0000
+            </a>
+        </div>
+    </li>
+
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-envelope text-primary-500 text-lg"></i>
+        </div>
+        <div>
+            <span class="block text-xs text-gray-500">البريد الإلكتروني</span>
+            <a href="mailto:info@alwadhnani.com" class="font-bold hover:text-primary-400 transition-colors">
+                info@alwadhnani.com
+            </a>
+        </div>
+    </li>
+
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-location-dot text-primary-500 text-lg"></i>
+        </div>
+        <div>
+            <span class="block text-xs text-gray-500">العنوان</span>
+            <span class="font-bold">الدمام - حي المحمدية</span>
+        </div>
+    </li>
+</ul>
 
                 <!-- Newsletter -->
                 <div class="mt-6">
