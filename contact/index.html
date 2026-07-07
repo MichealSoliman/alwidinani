@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب الوذيناني للاستشارات الهندسية | إبداع هندسي ورؤية مستقبلية</title>
+    <meta name="description" content="مكتب الوذيناني للاستشارات الهندسية – متخصصون في التصميم المعماري، الإنشائي، الإشراف الهندسي، وإدارة المشاريع بأعلى معايير الجودة.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#007ba7',
+                            600: '#00668a',
+                            700: '#005473',
+                        },
+                        dark: '#0b1f33',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11, 31, 51, 0.9) 0%, rgba(0, 123, 167, 0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1503387762-592dea58ef23?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007ba7;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-link::after {
+            width: 100%;
+        }
+        .testimonial-active {
+            display: block !important;
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 leading-relaxed overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <nav class="glass-nav rounded-2xl shadow-lg border border-white/20 flex items-center justify-between px-6 py-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary-500 p-2 rounded-xl text-white shadow-lg shadow-primary-500/30">
+                        <img src="../img/Artboard 1.png" alt="" class="w-16 h-16 object-contain">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold text-dark tracking-tight">مكتب الوذيناني</span>
+                        <span class="text-[10px] font-bold text-primary-500 uppercase tracking-widest -mt-1">للاستشارات الهندسية</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8 font-bold text-sm text-gray-600">
+                    <li><a href="../index.html" class="nav-link  hover:text-primary-500 transition">الرئيسية</a></li>
+                    <li><a href="../about/" class="nav-link hover:text-primary-500 transition ">من نحن</a></li>
+                    <li><a href="../services/" class="nav-link hover:text-primary-500 transition">خدماتنا</a></li>
+                    <li><a href="../projects/" class="nav-link hover:text-primary-500 transition">مشاريعنا</a></li>
+                    <li><a href="#" class="nav-link hover:text-primary-500 transition active-link ">تواصل معنا </a></li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hidden md:flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-primary-500/40">
+                        <span>اطلب استشارة</span>
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="lg:hidden text-dark p-2 hover:bg-gray-100 rounded-lg transition">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-dark/60 backdrop-blur-sm z-50">
+            <div class="absolute top-0 right-0 h-full w-3/4 bg-white shadow-2xl p-8 flex flex-col">
+                <div class="flex items-center justify-between mb-12">
+                    <span class="text-xl font-bold text-dark">القائمة</span>
+                    <button id="close-menu-btn" class="text-gray-500 p-2 hover:bg-gray-100 rounded-lg">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col gap-6 text-lg font-bold text-gray-700">
+                    <li><a href="../index.html" class="mobile-nav-link">الرئيسية</a></li>
+                    <li><a href="../about/" class="mobile-nav-link">من نحن</a></li>
+                    <li><a href="../services/" class="mobile-nav-link">خدماتنا</a></li>
+                    <li><a href="../projects/" class="mobile-nav-link">مشاريعنا</a></li>
+                    <li><a href="#" class="mobile-nav-link text-primary-500">تواصل معنا</a></li>
+                </ul>
+                <div class="mt-auto pt-8 border-t">
+                    <p class="text-sm text-gray-500 mb-4">تابعنا على:</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Contact Hero Section -->
+<section id="contact-hero" class="min-h-[80vh] flex items-center pt-20 relative overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+        <!-- Static Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center" 
+             style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        
+        <!-- Fog Overlay -->
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, 
+            rgba(10, 25, 47, 0.4) 0%, 
+            rgba(10, 25, 47, 0.7) 40%, 
+            rgba(10, 25, 47, 0.85) 70%, 
+            rgba(10, 25, 47, 0.95) 100%);">
+        </div>
+        
+        <!-- Additional Fog Effect -->
+        <div class="absolute inset-0 opacity-50" style="background: 
+            radial-gradient(ellipse at 30% 50%, rgba(30, 58, 95, 0.3) 0%, transparent 60%),
+            radial-gradient(ellipse at 70% 50%, rgba(30, 58, 95, 0.2) 0%, transparent 60%);">
+        </div>
+        
+        <!-- Texture Overlay -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Breadcrumb -->
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full text-white/80 text-sm mb-8" data-aos="fade-up">
+                <a href="#home" class="hover:text-white transition-colors">الرئيسية</a>
+                <i data-lucide="chevron-left" class="w-3 h-3"></i>
+                <span class="text-white font-bold">تواصل معنا</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-6" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-accent">تواصل</span> معنا
+                <br class="hidden sm:block">
+                <span class="text-white">نحن هنا لخدمتك</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                فريقنا مستعد للاستماع إلى استفساراتكم واحتياجاتكم الهندسية، تواصلوا معنا الآن لنبدأ رحلة بناء المستقبل معاً
+            </p>
+
+            <!-- Divider -->
+            <div class="flex justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="300">
+                <span class="w-16 h-1 rounded-full bg-primary-500"></span>
+                <span class="w-8 h-1 rounded-full bg-accent"></span>
+                <span class="w-4 h-1 rounded-full bg-white/20"></span>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12" data-aos="fade-up" data-aos-delay="400">
+                <!-- Phone -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-primary-500/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-primary-500/20 mx-auto mb-3 flex items-center justify-center group-hover:bg-primary-500 transition-colors duration-300">
+                        <i data-lucide="phone" class="w-5 h-5 text-primary-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">اتصل بنا</h4>
+                    <a href="tel:+966500000000" class="text-gray-300 text-sm hover:text-accent transition-colors">+966 50 000 0000</a>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-primary-500/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-primary-500/20 mx-auto mb-3 flex items-center justify-center group-hover:bg-primary-500 transition-colors duration-300">
+                        <i data-lucide="mail" class="w-5 h-5 text-primary-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">راسلنا</h4>
+                    <a href="mailto:info@alwadhnani.com" class="text-gray-300 text-sm hover:text-accent transition-colors">info@alwadhnani.com</a>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-primary-500/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-primary-500/20 mx-auto mb-3 flex items-center justify-center group-hover:bg-primary-500 transition-colors duration-300">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-primary-400 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">زورنا</h4>
+                    <span class="text-gray-300 text-sm">الدمام - حي المحمدية</span>
+                </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="mt-8 inline-flex items-center gap-4 bg-white/5 backdrop-blur-md rounded-2xl px-6 py-3 border border-white/10" data-aos="fade-up" data-aos-delay="500">
+                <i data-lucide="clock" class="w-4 h-4 text-primary-400"></i>
+                <span class="text-gray-300 text-sm">ساعات العمل: الأحد - الخميس 8ص - 6م</span>
+                <span class="w-px h-6 bg-white/10"></span>
+                <span class="text-gray-300 text-sm">السبت 9ص - 2م</span>
+                <span class="w-px h-6 bg-white/10"></span>
+                <span class="text-accent text-sm font-bold">الجمعة: مغلق</span>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mt-10" data-aos="fade-up" data-aos-delay="600">
+                <a href="#contact-form" class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary-500/30 flex items-center gap-2 group">
+                    <span>أرسل استفسارك</span>
+                    <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#branches" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all flex items-center gap-2">
+                    <span>فروعنا</span>
+                    <i data-lucide="building-2" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 z-10">
+        <span class="text-[8px] uppercase tracking-[0.3em] font-bold">تواصل معنا</span>
+        <div class="w-1 h-10 rounded-full bg-white/10 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1/2 bg-accent animate-[scroll_2s_infinite]"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Counter Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
+        
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const step = Math.max(1, Math.floor(target / 50));
+            let current = 0;
+            
+            const update = () => {
+                current += step;
+                if (current >= target) {
+                    counter.textContent = target;
+                    return;
+                }
+                counter.textContent = current;
+                requestAnimationFrame(() => setTimeout(update, 30));
+            };
+            
+            update();
+        };
+        
+        // Start counters when in viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => observer.observe(counter));
+    });
+</script>
+
+<style>
+    /* Smooth transitions for hero */
+    #contact-hero .bg-cover {
+        transition: transform 0.3s ease;
+    }
+    
+    /* Keep existing animations */
+    @keyframes scroll {
+        0% { top: -50%; }
+        100% { top: 100%; }
+    }
+    
+    /* Counter numbers */
+    .counter {
+        font-variant-numeric: tabular-nums;
+    }
+    
+    /* Contact cards hover */
+    #contact-hero .group:hover .group-hover\:bg-primary-500 {
+        background: #2563EB;
+    }
+    
+    #contact-hero .group:hover .group-hover\:text-white {
+        color: white;
+    }
+    
+    /* Responsive */
+ 
+</style>
+
+
+
+<script>
+    // Counter Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
+        
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const step = Math.max(1, Math.floor(target / 50));
+            let current = 0;
+            
+            const update = () => {
+                current += step;
+                if (current >= target) {
+                    counter.textContent = target;
+                    return;
+                }
+                counter.textContent = current;
+                requestAnimationFrame(() => setTimeout(update, 30));
+            };
+            
+            update();
+        };
+        
+        // Start counters when in viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => observer.observe(counter));
+    });
+</script>
+
+<style>
+    /* Smooth transitions for hero */
+    #about-hero .bg-cover {
+        transition: transform 0.3s ease;
+    }
+    
+    /* Keep existing animations */
+    @keyframes scroll {
+        0% { top: -50%; }
+        100% { top: 100%; }
+    }
+    
+    /* Floating effect for badge */
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    /* Counter numbers */
+    .counter {
+        font-variant-numeric: tabular-nums;
+    }
+    
+    /* Responsive */
+    /* @media (max-width: 768px) {
+        #about-hero .min-h-[60vh] {
+            min-height: 70vh;
+        }
+        #about-hero .grid-cols-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+        #about-story .grid-cols-2 {
+            grid-template-columns: 1fr;
+        }
+        #about-story .mt-12 {
+            margin-top: 0;
+        }
+    } */
+</style>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white relative overflow-hidden">
+    <!-- Decorative Background -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <div class="inline-flex items-center gap-3 bg-primary-50 border border-primary-100 px-6 py-2.5 rounded-full mb-5">
+                <i data-lucide="phone" class="w-4 h-4 text-primary-500"></i>
+                <span class="text-primary-600 text-xs font-bold tracking-wider">تواصل معنا</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-black text-dark mb-3">
+                نحن هنا <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-accent">لخدمتك</span>
+            </h2>
+            <p class="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
+                تواصل معنا عبر أي من القنوات التالية، فريقنا ينتظرك لتقديم أفضل الحلول الهندسية
+            </p>
+            <div class="flex justify-center gap-2 mt-4">
+                <span class="w-10 h-0.5 rounded-full bg-primary-500"></span>
+                <span class="w-5 h-0.5 rounded-full bg-accent"></span>
+                <span class="w-3 h-0.5 rounded-full bg-gray-300"></span>
+            </div>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="grid lg:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="100">
+            
+            <!-- Left Side: Contact Info -->
+            <div class="space-y-6">
+                <!-- Phone Numbers -->
+                <div class="bg-gray-50 rounded-3xl p-6 md:p-8 border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-dark">اتصل بنا</h3>
+                            <p class="text-xs text-gray-400">نحن هنا للإجابة على استفساراتكم</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 pr-4">
+                        <a href="tel:+966500000000" class="flex items-center justify-between group p-3 bg-white rounded-2xl hover:bg-primary-50 transition-all duration-300 border border-gray-100 hover:border-primary-200">
+                            <span class="text-sm font-bold text-dark group-hover:text-primary-600 transition-colors">الهاتف الرئيسي</span>
+                            <span class="text-sm text-primary-500 font-bold">+966 50 000 0000</span>
+                        </a>
+                        <a href="tel:+966500000001" class="flex items-center justify-between group p-3 bg-white rounded-2xl hover:bg-primary-50 transition-all duration-300 border border-gray-100 hover:border-primary-200">
+                            <span class="text-sm font-bold text-dark group-hover:text-primary-600 transition-colors">الهاتف البديل</span>
+                            <span class="text-sm text-primary-500 font-bold">+966 50 000 0001</span>
+                        </a>
+                        <a href="tel:+966500000002" class="flex items-center justify-between group p-3 bg-white rounded-2xl hover:bg-primary-50 transition-all duration-300 border border-gray-100 hover:border-primary-200">
+                            <span class="text-sm font-bold text-dark group-hover:text-primary-600 transition-colors">فاكس</span>
+                            <span class="text-sm text-primary-500 font-bold">+966 50 000 0002</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email & Address -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-lg">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-sm font-black text-dark">البريد الإلكتروني</h4>
+                        </div>
+                        <a href="mailto:info@alwadhnani.com" class="text-sm text-gray-600 hover:text-primary-500 transition-colors block">info@alwadhnani.com</a>
+                        <a href="mailto:support@alwadhnani.com" class="text-sm text-gray-600 hover:text-primary-500 transition-colors block mt-1">support@alwadhnani.com</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-lg">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-sm font-black text-dark">العنوان</h4>
+                        </div>
+                        <p class="text-sm text-gray-600">الدمام - حي المحمدية</p>
+                        <p class="text-sm text-gray-600">المملكة العربية السعودية</p>
+                        <a href="https://www.google.com/maps" target="_blank" class="text-xs text-primary-500 font-bold hover:text-primary-600 transition-colors inline-flex items-center gap-1 mt-2">
+                            <span>عرض على الخريطة</span>
+                            <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Social Media & Working Hours -->
+            <div class="space-y-6">
+                <!-- Social Media -->
+                <div class="bg-gray-50 rounded-3xl p-6 md:p-8 border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500">
+                            <i data-lucide="share-2" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-dark">وسائل التواصل الاجتماعي</h3>
+                            <p class="text-xs text-gray-400">تابعنا على منصاتنا الرسمية</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <!-- tiktok -->
+                        <a href="https://www.tiktok.com/@engineeringconsultances?_r=1&_t=ZS-96WrTFoILsv" target="_blank" class="group flex items-center gap-3 p-3 bg-white rounded-2xl hover:bg-black transition-all duration-300 border border-gray-100 hover:border-transparent hover:shadow-lg">
+                        <div class="w-10 h-10 rounded-xl bg-black/10 flex items-center justify-center text-black group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-tiktok w-5 h-5"></i>
+                        </div>
+                        <div class="flex-1">
+                            <span class="text-xs font-bold text-dark group-hover:text-white transition-colors block">تيك توك</span>
+                            <span class="text-[10px] text-gray-400 group-hover:text-white/70 transition-colors">@AlWadhnani</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-left text-sm text-gray-300 group-hover:text-white transition-colors"></i>
+                    </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/designer_architect056?igsh=d2Y1dDloeDZtbDUz&utm_source=qr" target="_blank" class="group flex items-center gap-3 p-3 bg-white rounded-2xl hover:bg-gradient-to-r hover:from-[#E4405F] hover:to-[#F58529] transition-all duration-300 border border-gray-100 hover:border-transparent hover:shadow-lg">
+                            <div class="w-10 h-10 rounded-xl bg-[#E4405F]/10 flex items-center justify-center text-[#E4405F] group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                                <i class="fa-brands fa-instagram w-5 h-5"></i>
+                            </div>
+                            <div class="flex-1">
+                                <span class="text-xs font-bold text-dark group-hover:text-white transition-colors block">انستقرام</span>
+                                <span class="text-[10px] text-gray-400 group-hover:text-white/70 transition-colors">@AlWadhnani</span>
+                            </div>
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-gray-300 group-hover:text-white transition-colors"></i>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="#" target="_blank" class="group flex items-center gap-3 p-3 bg-white rounded-2xl hover:bg-[#1877F2] transition-all duration-300 border border-gray-100 hover:border-transparent hover:shadow-lg">
+                            <div class="w-10 h-10 rounded-xl bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                                <i class="fa-brands fa-facebook-f w-5 h-5"></i>
+                            </div>
+                            <div class="flex-1">
+                                <span class="text-xs font-bold text-dark group-hover:text-white transition-colors block">فيسبوك</span>
+                                <span class="text-[10px] text-gray-400 group-hover:text-white/70 transition-colors">AlWadhnani</span>
+                            </div>
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-gray-300 group-hover:text-white transition-colors"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/posts/al-fashne-digital-marketing-agency_%D8%A7%D9%84%D9%81%D8%B1%D8%AD%D8%A9-%D9%84%D9%85%D8%A7-%D8%AA%D9%83%D9%88%D9%86-%D8%A8%D8%A7%D8%B3%D9%85-%D9%85%D8%B5%D8%B1%D9%84%D9%8A%D9%87%D8%A7-%D8%B7%D8%B9%D9%85-%D9%85%D8%AE%D8%AA%D9%84%D9%81-activity-7479123327463309313-2cfb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZku_4BwiYCZo6uSnesfu8T2PiJamq58S8" target="_blank" class="group flex items-center gap-3 p-3 bg-white rounded-2xl hover:bg-[#0A66C2] transition-all duration-300 border border-gray-100 hover:border-transparent hover:shadow-lg">
+                            <div class="w-10 h-10 rounded-xl bg-[#0A66C2]/10 flex items-center justify-center text-[#0A66C2] group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in w-5 h-5"></i>
+                            </div>
+                            <div class="flex-1">
+                                <span class="text-xs font-bold text-dark group-hover:text-white transition-colors block">لينكد إن</span>
+                                <span class="text-[10px] text-gray-400 group-hover:text-white/70 transition-colors">AlWadhnani</span>
+                            </div>
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-gray-300 group-hover:text-white transition-colors"></i>
+                        </a>
+                    </div>
+
+                    <!-- Additional Social -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <a href="#" target="_blank" class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl text-xs text-gray-600 hover:text-primary-500 hover:bg-primary-50 transition-all duration-300 border border-gray-100">
+                            <i data-lucide="youtube" class="w-3.5 h-3.5"></i>
+                            يوتيوب
+                        </a>
+                        <a href="#" target="_blank" class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl text-xs text-gray-600 hover:text-primary-500 hover:bg-primary-50 transition-all duration-300 border border-gray-100">
+                            <i data-lucide="tiktok" class="w-3.5 h-3.5"></i>
+                            تيك توك
+                        </a>
+                        <a href="#" target="_blank" class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl text-xs text-gray-600 hover:text-primary-500 hover:bg-primary-50 transition-all duration-300 border border-gray-100">
+                            <i data-lucide="whatsapp" class="w-3.5 h-3.5"></i>
+                            واتساب
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Working Hours -->
+                <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-500">
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-dark">ساعات العمل</h4>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center p-2.5 bg-white rounded-xl">
+                            <span class="text-sm text-gray-600">الأحد - الخميس</span>
+                            <span class="text-sm font-bold text-dark">8:00 ص - 6:00 م</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-white rounded-xl">
+                            <span class="text-sm text-gray-600">السبت</span>
+                            <span class="text-sm font-bold text-dark">9:00 ص - 2:00 م</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-accent/5 border border-accent/20 rounded-xl">
+                            <span class="text-sm text-gray-600">الجمعة</span>
+                            <span class="text-sm font-bold text-accent">مغلق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="inline-flex items-center gap-4 bg-gradient-to-r from-primary-500/10 to-accent/10 rounded-3xl px-8 py-4 border border-primary-200">
+                <i data-lucide="message-circle" class="w-5 h-5 text-primary-500"></i>
+                <p class="text-dark font-bold text-sm">نحن هنا لمساعدتك 24/7</p>
+                <a href="#contact-form" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary-500/30 flex items-center gap-2">
+                    <span>أرسل استفساراً</span>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Contact Section Styles */
+        #contact .group:hover .group-hover\:bg-\[color\] {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #contact .hover\:shadow-lg {
+            transition: all 0.3s ease;
+        }
+        
+        /* Social media hover effects */
+        #contact .group:hover .group-hover\:text-white {
+            color: white;
+        }
+        
+        #contact .group:hover .group-hover\:text-white\/70 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            #contact .grid-cols-1.sm\:grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            #contact .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            #contact .inline-flex.items-center.gap-4 {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 1rem;
+            }
+        }
+    </style>
+</section>
+
+
+    <!-- Branches Section -->
+<section id="branches" class="py-24 bg-slate-50 relative overflow-hidden">
+    <!-- Decorative Background -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center gap-3 bg-primary-50 border border-primary-100 px-6 py-3 rounded-full mb-6">
+                <i data-lucide="map-pin" class="w-5 h-5 text-primary-500"></i>
+                <span class="text-primary-600 text-sm font-bold tracking-wider">فروعنا</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">
+                نخدمك من <br>
+                <span class="text-transparent bg-clip-text bg-primary-500">أربع مدن</span>
+            </h2>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+                وجودنا في عدة مدن يضمن وصول خدماتنا الهندسية لك أينما كنت
+            </p>
+            <div class="flex justify-center gap-2 mt-6">
+                <span class="w-12 h-1 rounded-full bg-primary-500"></span>
+                <span class="w-6 h-1 rounded-full bg-accent"></span>
+                <span class="w-3 h-1 rounded-full bg-gray-300"></span>
+            </div>
+        </div>
+
+        <!-- Branches Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Branch 1: الدمام -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-primary-300 h-full">
+                    <!-- Map Container -->
+                    <div class="relative h-64 overflow-hidden bg-gray-100">
+                        <!-- Google Maps Iframe -->
+                        <iframe 
+                            src="../img/img11.png" 
+                            class="w-full h-full border-0 transition-transform duration-700 group-hover:scale-105"
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <!-- Overlay with click to open -->
+                        <a href="https://maps.app.goo.gl/eRQ4MPtFVhL1QQ1k7?g_st=ic" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="absolute inset-0 flex items-center justify-center bg-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <span class="bg-white/90 backdrop-blur-md text-dark px-6 py-3 rounded-2xl font-bold flex items-center gap-3 shadow-xl">
+                                <i data-lucide="map" class="w-5 h-5 text-primary-500"></i>
+                                افتح الخريطة
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </span>
+                        </a>
+                        
+                        <!-- Status Badge -->
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                            <span class="flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
+                            تحت الإنشاء
+                        </div>
+                        
+                        <!-- Location Pin -->
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2 shadow-lg flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary-500"></i>
+                            <span class="text-xs font-bold text-dark">حي المحمدية</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Branch Info -->
+                    <div class="p-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-primary-500"></i>
+                                    <h3 class="text-xl font-black text-dark">مكتب الدمام</h3>
+                                </div>
+                                <p class="text-gray-500 text-sm">حي المحمدية - الدمام</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:+966500000001" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://maps.app.goo.gl/eRQ4MPtFVhL1QQ1k7?g_st=ic" 
+                                   target="_blank"
+                                   class="w-10 h-10 rounded-xl bg-accent/10 hover:bg-accent hover:text-white flex items-center justify-center text-accent transition-all duration-300">
+                                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Clickable Map Button -->
+                        <a href="https://maps.app.goo.gl/eRQ4MPtFVhL1QQ1k7?g_st=ic" 
+                           target="_blank"
+                           class="mt-4 w-full flex items-center justify-center gap-2 bg-primary-50 hover:bg-primary-500 text-primary-600 hover:text-white px-4 py-3 rounded-2xl font-bold transition-all duration-300 group/btn">
+                            <i data-lucide="map" class="w-5 h-5 group-hover/btn:scale-110 transition-transform"></i>
+                            <span>عرض الموقع على الخريطة</span>
+                            <i data-lucide="arrow-left" class="w-4 h-4 group-hover/btn:-translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branch 2: المويه -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-primary-300 h-full">
+                    <div class="relative h-64 overflow-hidden bg-gray-100">
+                        <iframe 
+                            src="../img/img12.png" 
+                            class="w-full h-full border-0 transition-transform duration-700 group-hover:scale-105"
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <a href="https://maps.app.goo.gl/WKMaHk6KbuimYz1RA?g_st=ic" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="absolute inset-0 flex items-center justify-center bg-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <span class="bg-white/90 backdrop-blur-md text-dark px-6 py-3 rounded-2xl font-bold flex items-center gap-3 shadow-xl">
+                                <i data-lucide="map" class="w-5 h-5 text-primary-500"></i>
+                                افتح الخريطة
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </span>
+                        </a>
+                        
+                        <!-- Status Badge - Active -->
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                            <span class="flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
+                            مفتوح
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2 shadow-lg flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary-500"></i>
+                            <span class="text-xs font-bold text-dark">حي النسيم</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-primary-500"></i>
+                                    <h3 class="text-xl font-black text-dark">مكتب المويه</h3>
+                                </div>
+                                <p class="text-gray-500 text-sm">حي النسيم - المويه</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:+966500000002" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://maps.app.goo.gl/WKMaHk6KbuimYz1RA?g_st=ic" 
+                                   target="_blank"
+                                   class="w-10 h-10 rounded-xl bg-accent/10 hover:bg-accent hover:text-white flex items-center justify-center text-accent transition-all duration-300">
+                                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href="https://maps.app.goo.gl/WKMaHk6KbuimYz1RA?g_st=ic" 
+                           target="_blank"
+                           class="mt-4 w-full flex items-center justify-center gap-2 bg-primary-50 hover:bg-primary-500 text-primary-600 hover:text-white px-4 py-3 rounded-2xl font-bold transition-all duration-300 group/btn">
+                            <i data-lucide="map" class="w-5 h-5 group-hover/btn:scale-110 transition-transform"></i>
+                            <span>عرض الموقع على الخريطة</span>
+                            <i data-lucide="arrow-left" class="w-4 h-4 group-hover/btn:-translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branch 3: مكة المكرمة -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-primary-300 h-full">
+                    <div class="relative h-64 overflow-hidden bg-gray-100">
+                        <iframe 
+                            src="../img/img-13.png" 
+                            class="w-full h-full border-0 transition-transform duration-700 group-hover:scale-105"
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.4219489,39.8281074,14.83z/data=!4m6!3m5!1s0x15c21b003a17b363:0x3651811f8fe48e04!8m2!3d21.3794378!4d39.8012064!16s%2Fg%2F11m63z44c4!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="absolute inset-0 flex items-center justify-center bg-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <span class="bg-white/90 backdrop-blur-md text-dark px-6 py-3 rounded-2xl font-bold flex items-center gap-3 shadow-xl">
+                                <i data-lucide="map" class="w-5 h-5 text-primary-500"></i>
+                                افتح الخريطة
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </span>
+                        </a>
+                        
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                            <span class="flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
+                            مفتوح
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2 shadow-lg flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary-500"></i>
+                            <span class="text-xs font-bold text-dark">حي الشوقية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-primary-500"></i>
+                                    <h3 class="text-xl font-black text-dark">مكتب مكة المكرمة</h3>
+                                </div>
+                                <p class="text-gray-500 text-sm">حي الشوقية - مكة المكرمة</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:+966500000003" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.4219489,39.8281074,14.83z/data=!4m6!3m5!1s0x15c21b003a17b363:0x3651811f8fe48e04!8m2!3d21.3794378!4d39.8012064!16s%2Fg%2F11m63z44c4!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                                   target="_blank"
+                                   class="w-10 h-10 rounded-xl bg-accent/10 hover:bg-accent hover:text-white flex items-center justify-center text-accent transition-all duration-300">
+                                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.4219489,39.8281074,14.83z/data=!4m6!3m5!1s0x15c21b003a17b363:0x3651811f8fe48e04!8m2!3d21.3794378!4d39.8012064!16s%2Fg%2F11m63z44c4!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                           target="_blank"
+                           class="mt-4 w-full flex items-center justify-center gap-2 bg-primary-50 hover:bg-primary-500 text-primary-600 hover:text-white px-4 py-3 rounded-2xl font-bold transition-all duration-300 group/btn">
+                            <i data-lucide="map" class="w-5 h-5 group-hover/btn:scale-110 transition-transform"></i>
+                            <span>عرض الموقع على الخريطة</span>
+                            <i data-lucide="arrow-left" class="w-4 h-4 group-hover/btn:-translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branch 4: الطائف -->
+            <div class="group" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-primary-300 h-full">
+                    <div class="relative h-64 overflow-hidden bg-gray-100">
+                        <iframe 
+                            src="../img/img-14.png" 
+                            class="w-full h-full border-0 transition-transform duration-700 group-hover:scale-105"
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.2726205,40.3959175,15.07z/data=!4m6!3m5!1s0x15e98f89f886483b:0x3aaf0fe95998db56!8m2!3d21.2716741!4d40.4022123!16s%2Fg%2F11fk407255?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="absolute inset-0 flex items-center justify-center bg-dark/40 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <span class="bg-white/90 backdrop-blur-md text-dark px-6 py-3 rounded-2xl font-bold flex items-center gap-3 shadow-xl">
+                                <i data-lucide="map" class="w-5 h-5 text-primary-500"></i>
+                                افتح الخريطة
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </span>
+                        </a>
+                        
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                            <span class="flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
+                            مفتوح
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2 shadow-lg flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary-500"></i>
+                            <span class="text-xs font-bold text-dark">حي السلامة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-primary-500"></i>
+                                    <h3 class="text-xl font-black text-dark">مكتب الطائف</h3>
+                                </div>
+                                <p class="text-gray-500 text-sm">حي السلامة - الطائف</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:+966500000004" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.2726205,40.3959175,15.07z/data=!4m6!3m5!1s0x15e98f89f886483b:0x3aaf0fe95998db56!8m2!3d21.2716741!4d40.4022123!16s%2Fg%2F11fk407255?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                                   target="_blank"
+                                   class="w-10 h-10 rounded-xl bg-accent/10 hover:bg-accent hover:text-white flex items-center justify-center text-accent transition-all duration-300">
+                                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.2726205,40.3959175,15.07z/data=!4m6!3m5!1s0x15e98f89f886483b:0x3aaf0fe95998db56!8m2!3d21.2716741!4d40.4022123!16s%2Fg%2F11fk407255?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                           target="_blank"
+                           class="mt-4 w-full flex items-center justify-center gap-2 bg-primary-50 hover:bg-primary-500 text-primary-600 hover:text-white px-4 py-3 rounded-2xl font-bold transition-all duration-300 group/btn">
+                            <i data-lucide="map" class="w-5 h-5 group-hover/btn:scale-110 transition-transform"></i>
+                            <span>عرض الموقع على الخريطة</span>
+                            <i data-lucide="arrow-left" class="w-4 h-4 group-hover/btn:-translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center mt-16" data-aos="fade-up">
+            <div class="inline-flex items-center gap-4 bg-gradient-to-r from-primary-500/10 to-accent/10 rounded-3xl px-8 py-6 border border-primary-200">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5 text-primary-500"></i>
+                    <span class="text-dark font-bold">للاستفسار:</span>
+                    <a href="tel:+966500000000" class="text-primary-500 font-bold hover:text-primary-600 transition-colors">+966 50 000 0000</a>
+                </div>
+                <div class="w-px h-8 bg-gray-300"></div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5 text-primary-500"></i>
+                    <a href="mailto:info@alwadhnani.com" class="text-primary-500 font-bold hover:text-primary-600 transition-colors">info@alwadhnani.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Branches Section Styles */
+        #branches .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+        
+        #branches .group:hover .group-hover\:border-primary-300 {
+            border-color: #93C5FD;
+        }
+        
+        /* Map overlay transition */
+        #branches .absolute.inset-0.bg-dark\/40 {
+            backdrop-filter: blur(2px);
+        }
+        
+        /* Smooth hover transitions */
+        #branches .transition-all {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #branches .transition-transform {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Iframe container */
+        #branches iframe {
+            pointer-events: none;
+        }
+        
+        #branches .group:hover iframe {
+            pointer-events: none;
+        }
+        
+        /* Status badge pulse */
+        #branches .bg-green-500 .animate-pulse,
+        #branches .bg-yellow-500 .animate-pulse {
+            animation-duration: 1.5s;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            #branches .md\:grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            #branches .flex-wrap {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Footer - Premium Design -->
+<footer class="relative bg-dark text-white overflow-hidden">
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Top Wave Shape -->
+    <div class="relative z-10">
+        <svg class="w-full h-20 text-white" viewBox="0 0 1440 100" fill="currentColor" preserveAspectRatio="none">
+            <path d="M0,40 C240,100 480,0 720,40 C960,80 1200,20 1440,40 L1440,100 L0,100 Z"></path>
+        </svg>
+    </div>
+
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+            
+            <!-- Column 1: Brand -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="relative">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent flex items-center justify-center shadow-lg shadow-primary-500/30">
+                           <img src="../img/Artboard 1.png" alt="" class="w-16 h-16 rounded-xl">
+                        </div>
+                        <div class="absolute -inset-1 bg-primary-500/20 rounded-2xl blur-xl -z-10"></div>
+                    </div>
+                    <span class="text-2xl font-black text-white">مكتب الوذيناني</span>
+                </div>
+                <p class="text-gray-400 leading-relaxed mb-6 max-w-sm">
+                    نحن لسنا مجرد مكتب هندسي، بل شركاء في بناء المستقبل. نقدم حلولاً تجمع بين الكفاءة والجمال والاستدامة.
+                </p>
+                
+                <!-- Social Media -->
+                              <div class="flex gap-3">
+                                <a href="https://www.tiktok.com/@engineeringconsultances?_r=1&_t=ZS-96WrTFoILsv" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/designer_architect056?igsh=d2Y1dDloeDZtbDUz&utm_source=qr" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+
+                                
+
+                                <a href="https://www.linkedin.com/posts/al-fashne-digital-marketing-agency_%D8%A7%D9%84%D9%81%D8%B1%D8%AD%D8%A9-%D9%84%D9%85%D8%A7-%D8%AA%D9%83%D9%88%D9%86-%D8%A8%D8%A7%D8%B3%D9%85-%D9%85%D8%B5%D8%B1%D9%84%D9%8A%D9%87%D8%A7-%D8%B7%D8%B9%D9%85-%D9%85%D8%AE%D8%AA%D9%84%D9%81-activity-7479123327463309313-2cfb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZku_4BwiYCZo6uSnesfu8T2PiJamq58S8" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
+                                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+                                </a>
+
+                                
+                            </div>
+
+                <!-- Trust Badge -->
+                <div class="mt-6 flex items-center gap-4 bg-white/5 rounded-2xl px-4 py-3 border border-white/5">
+                    <div class="flex text-yellow-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <span class="text-xs text-gray-400">تقييم 4.9 من 180 عميل</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                    <span class="w-8 h-0.5 bg-primary-500"></span>
+                    روابط سريعة
+                </h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="../index.html" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-primary-400">الرئيسية</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../about/" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-primary-400">من نحن</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../services/" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-primary-400">خدماتنا</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../projects/" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-primary-400">مشاريعنا </span>
+                        </a>
+                    
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-primary-500 opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-primary-400">تواصل معنا</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                    <span class="w-8 h-0.5 bg-accent"></span>
+                    خدماتنا
+                </h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-accent opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-accent">التصميم المعماري</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-accent opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-accent">التصميم الإنشائي</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-accent opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-accent">الإشراف الهندسي</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-accent opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-accent">إصدار التراخيص</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 flex items-center gap-2 hover:translate-x-1 group">
+                            <i data-lucide="chevron-left" class="w-3 h-3 text-accent opacity-0 group-hover:opacity-100 transition-all"></i>
+                            <span class="group-hover:text-accent">استشارات السلامة</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div>
+                <h4 class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                    <span class="w-8 h-0.5 bg-primary-500"></span>
+                    معلومات الاتصال
+                </h4>
+                <ul class="space-y-4">
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-phone text-primary-500 text-lg"></i>
+        </div>
+        <div>
+            <span class="block text-xs text-gray-500">هاتف</span>
+            <a href="tel:+966500000000" class="font-bold hover:text-primary-400 transition-colors">
+                +966 50 000 0000
+            </a>
+        </div>
+    </li>
+
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-envelope text-primary-500 text-lg"></i>
+        </div>
+        <div>
+            <span class="block text-xs text-gray-500">البريد الإلكتروني</span>
+            <a href="mailto:info@alwadhnani.com" class="font-bold hover:text-primary-400 transition-colors">
+                info@alwadhnani.com
+            </a>
+        </div>
+    </li>
+
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-location-dot text-primary-500 text-lg"></i>
+        </div>
+        <div>
+            <span class="block text-xs text-gray-500">العنوان</span>
+            <span class="font-bold">الدمام - حي المحمدية</span>
+        </div>
+    </li>
+</ul>
+
+                <!-- Newsletter -->
+                <div class="mt-6">
+                    <p class="text-xs text-gray-500 mb-2">اشترك في نشرتنا البريدية</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="بريدك الإلكتروني" 
+                               class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-all text-sm">
+                        <button class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2.5 rounded-xl font-bold transition-all hover:shadow-lg hover:shadow-primary-500/30 text-sm">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="pt-8 pb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 <span class="text-white font-bold">مكتب الوذيناني</span> للاستشارات الهندسية.
+                    <span class="hidden sm:inline">جميع الحقوق محفوظة.</span>
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+                <a href="#" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+                    <i data-lucide="shield" class="w-3 h-3"></i>
+                    سياسة الخصوصية
+                </a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+                    <i data-lucide="file-text" class="w-3 h-3"></i>
+                    الشروط والأحكام
+                </a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+                    <i data-lucide="globe" class="w-3 h-3"></i>
+                    English
+                </a>
+            </div>
+
+            <!-- Back to Top -->
+            <button onclick="window.scrollTo({top:0,behavior:'smooth'})" 
+                    class="w-10 h-10 rounded-full bg-primary-500 hover:bg-primary-600 text-white flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30 group">
+                <i data-lucide="chevron-up" class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Decorative Line -->
+        <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-primary-500/30 to-transparent mt-2"></div>
+    </div>
+
+    <style>
+        /* Footer Styles */
+        footer {
+            background: #0A192F;
+        }
+        
+        /* Wave shape */
+        footer svg {
+            transform: rotate(180deg);
+            margin-bottom: -1px;
+        }
+        
+        /* Social icons hover */
+        footer .hover\:scale-110:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Newsletter input focus */
+        footer input:focus {
+            border-color: #2563EB;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        /* Smooth transitions */
+        footer .transition-all {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Link hover effect */
+        footer .hover\:translate-x-1:hover {
+            transform: translateX(-4px);
+        }
+        
+        /* Back to top button */
+        footer button[onclick] {
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            footer .grid {
+                gap: 2rem;
+            }
+            footer .md\:flex-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .flex-wrap {
+                justify-content: center;
+            }
+            footer .hidden.sm\:inline {
+                display: none;
+            }
+        }
+    </style>
+</footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="fixed bottom-8 left-8 w-14 h-14 bg-primary-500 text-white rounded-2xl shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-primary-600">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        };
+
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'translate-y-10');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'translate-y-10');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counters Animation
+        const counters = document.querySelectorAll('.counter');
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + speed);
+                    setTimeout(animateCounters, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Trigger counters when in view
+        const statsSection = document.getElementById('home');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.unobserve(statsSection);
+            }
+        });
+        observer.observe(statsSection);
+
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        let currentTestimonial = 0;
+
+        const showTestimonial = (index) => {
+            testimonials.forEach(t => t.classList.remove('testimonial-active'));
+            testimonials[index].classList.add('testimonial-active');
+        };
+
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        // Filter Projects
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Active button
+                filterBtns.forEach(b => b.classList.remove('active', 'bg-primary-500', 'text-white'));
+                filterBtns.forEach(b => b.classList.add('bg-gray-100', 'text-gray-600'));
+                btn.classList.add('active', 'bg-primary-500', 'text-white');
+                btn.classList.remove('bg-gray-100', 'text-gray-600');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
