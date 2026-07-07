@@ -164,111 +164,708 @@
         </div>
     </header>
 
-<!-- Services Hero Section -->
-<section id="services-hero" class="min-h-[80vh] flex items-center pt-20 relative overflow-hidden">
-    <!-- Background -->
-    <div class="absolute inset-0 z-0">
-        <!-- Static Background Image -->
-        <div class="absolute inset-0 bg-cover bg-center" 
-             style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
-        </div>
-        
-        <!-- Fog Overlay -->
-        <div class="absolute inset-0" style="background: linear-gradient(180deg, 
-            rgba(10, 25, 47, 0.4) 0%, 
-            rgba(10, 25, 47, 0.7) 40%, 
-            rgba(10, 25, 47, 0.85) 70%, 
-            rgba(10, 25, 47, 0.95) 100%);">
-        </div>
-        
-        <!-- Additional Fog Effect -->
-        <div class="absolute inset-0 opacity-50" style="background: 
-            radial-gradient(ellipse at 30% 50%, rgba(30, 58, 95, 0.3) 0%, transparent 60%),
-            radial-gradient(ellipse at 70% 50%, rgba(30, 58, 95, 0.2) 0%, transparent 60%);">
-        </div>
-        
-        <!-- Texture Overlay -->
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-    </div>
-
-    <!-- Content -->
+<!-- Services Section - Premium White Design -->
+<section id="services" class="py-24 bg-white relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-500/30 to-transparent"></div>
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/3 rounded-full blur-3xl"></div>
+    
     <div class="container mx-auto px-4 md:px-6 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- Breadcrumb -->
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full text-white/80 text-sm mb-8" data-aos="fade-up">
-                <a href="#home" class="hover:text-white transition-colors">الرئيسية</a>
-                <i data-lucide="chevron-left" class="w-3 h-3"></i>
-                <span class="text-white font-bold">خدماتنا</span>
+        <!-- Section Header -->
+        <div class="text-center max-w-4xl mx-auto mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center gap-3 bg-primary-50 border border-primary-100 px-6 py-3 rounded-full mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-primary-500 animate-pulse"></span>
+                <span class="text-primary-600 text-sm font-bold tracking-wider">خدماتنا الهندسية</span>
             </div>
-
-            <!-- Title -->
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-6" data-aos="fade-up" data-aos-delay="100">
-                <span class="text-accent">حلول هندسية</span>
-                <br class="hidden sm:block">
-                <span class="text-white">متكاملة ومبتكرة</span>
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                نقدم باقة واسعة من الخدمات الهندسية التي تغطي كافة احتياجاتك، من التخطيط والتصميم إلى التنفيذ والإشراف، بكل احترافية وجودة عالية
+            <h2 class="text-4xl md:text-6xl font-black text-dark mb-6 leading-tight">
+                حلول هندسية <span class="text-transparent bg-clip-text bg-primary-500">متكاملة</span>
+                <br class="hidden sm:block">لكل احتياجاتك
+            </h2>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+                نقدم باقة متكاملة من الخدمات الهندسية التي تغطي جميع مراحل المشروع، من التخطيط إلى التنفيذ
             </p>
-
-            <!-- Divider -->
-            <div class="flex justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="300">
-                <span class="w-16 h-1 rounded-full bg-primary-500"></span>
-                <span class="w-8 h-1 rounded-full bg-accent"></span>
-                <span class="w-4 h-1 rounded-full bg-white/20"></span>
-            </div>
-
-            <!-- Quick Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12" data-aos="fade-up" data-aos-delay="400">
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
-                    <span class="block text-3xl font-black text-white mb-1">13</span>
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">خدمة متخصصة</span>
-                </div>
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
-                    <span class="block text-3xl font-black text-white mb-1 counter" data-target="25">0</span>
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">سنة خبرة</span>
-                </div>
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
-                    <span class="block text-3xl font-black text-white mb-1 counter" data-target="320">0</span>
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">مشروع منجز</span>
-                </div>
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:border-primary-500/30">
-                    <span class="block text-3xl font-black text-white mb-1">98<span class="text-xl">%</span></span>
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">رضا العملاء</span>
-                </div>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mt-10" data-aos="fade-up" data-aos-delay="500">
-                <a href="#services" class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary-500/30 flex items-center gap-2 group">
-                    <span>استكشف خدماتنا</span>
-                    <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
-                </a>
-                <a href="#contact" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all flex items-center gap-2">
-                    <span>اطلب استشارة</span>
-                    <i data-lucide="phone" class="w-5 h-5"></i>
-                </a>
-            </div>
-
-            <!-- Service Tags -->
-            <div class="flex flex-wrap justify-center gap-3 mt-10" data-aos="fade-up" data-aos-delay="600">
-                <span class="px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">التصميم المعماري</span>
-                <span class="px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">التصميم الإنشائي</span>
-                <span class="px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">الإشراف الهندسي</span>
-                <span class="px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">استشارات السلامة</span>
-                <span class="px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">إدارة المشاريع</span>
-                <span class="px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">التصميم الداخلي</span>
+            <div class="flex justify-center gap-2 mt-8">
+                <span class="w-12 h-1 rounded-full bg-primary-500"></span>
+                <span class="w-6 h-1 rounded-full bg-accent"></span>
+                <span class="w-3 h-1 rounded-full bg-gray-300"></span>
             </div>
         </div>
-    </div>
 
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 z-10">
-        <span class="text-[8px] uppercase tracking-[0.3em] font-bold">اكتشف خدماتنا</span>
-        <div class="w-1 h-10 rounded-full bg-white/10 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1/2 bg-accent animate-[scroll_2s_infinite]"></div>
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- 1. إصدار رخص البناء وفق كود البناء السعودي -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-primary-300 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-50 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <!-- Image -->
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="إصدار رخص البناء" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                كود البناء السعودي
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-lg shadow-primary-500/20">
+                                <i data-lucide="file-check" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-primary-500 transition-colors">إصدار رخص البناء</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">وفق كود البناء السعودي وبأسرع وقت</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>رخص بناء جديدة وترميم</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>متابعة الإجراءات الرسمية</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>استشارات ما قبل البناء</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. استشارات السلامة المهنية -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="150">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-accent-300 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="استشارات السلامة المهنية" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                سلامة أولاً
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-lg shadow-accent-500/20">
+                                <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-accent-600 transition-colors">استشارات السلامة المهنية</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">حماية الأرواح والممتلكات</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تقييم المخاطر المهنية</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>خطط الطوارئ والإخلاء</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تدريب وتأهيل الكوادر</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-accent-500 hover:text-accent-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. التصميم المعماري - Highlighted -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl p-6 border-2 border-primary-200 hover:border-primary-400 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute -top-2 -right-2 bg-primary-500 text-white text-[10px] font-bold px-4 py-1.5 rounded-full shadow-lg shadow-primary-500/30 z-10">
+                        ⭐ الأكثر طلباً
+                    </div>
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary-500/5 rounded-full blur-2xl"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="التصميم المعماري" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-white text-primary-600 text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                إبداع بلا حدود
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-lg shadow-primary-500/30">
+                                <i data-lucide="pencil-ruler" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1">التصميم المعماري</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">تصاميم عصرية تعكس الهوية</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصاميم 3D احترافية</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>توزيع فراغات مبتكر</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-700">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>هوية معمارية فريدة</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-primary-200">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. الاستشارات الهندسية المتكاملة -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="250">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-primary-300 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="الاستشارات الهندسية المتكاملة" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                حلول شاملة
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-lg shadow-primary-500/20">
+                                <i data-lucide="briefcase" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-primary-500 transition-colors">الاستشارات الهندسية المتكاملة</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">حلول شاملة لجميع التخصصات</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>دراسات جدوى اقتصادية</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تقييم فني للمشاريع</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>استشارات قانونية هندسية</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. هندسة السلامة والوقاية من الحريق -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-orange-400 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="هندسة السلامة والوقاية من الحريق" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                حماية متطورة
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">
+                                <i data-lucide="flame" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-orange-600 transition-colors">هندسة السلامة والوقاية من الحريق</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">أنظمة إطفاء وإنذار متطورة</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصميم أنظمة إطفاء الحريق</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>أنظمة إنذار وكشف الدخان</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصميم مخارج الطوارئ</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. إدارة المشاريع الهندسية -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="350">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-blue-400 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="إدارة المشاريع الهندسية" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                إدارة احترافية
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
+                                <i data-lucide="clipboard-list" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-blue-600 transition-colors">إدارة المشاريع الهندسية</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">من التخطيط إلى التسليم</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تخطيط وجدولة المشاريع</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>إدارة الميزانيات والتكاليف</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>متابعة وتقييم الأداء</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-blue-500 hover:text-blue-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. تصميم الحدائق -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-green-400 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تصميم الحدائق" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                طبيعة خلابة
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shrink-0 shadow-lg shadow-green-500/20">
+                                <i data-lucide="leaf" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-green-600 transition-colors">تصميم الحدائق</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">مناظر طبيعية ساحرة</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصميم حدائق منزلية</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>مسطحات خضراء ونوافير</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>أنظمة ري ذكية</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-green-500 hover:text-green-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. الإشراف الهندسي -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="450">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-purple-400 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="الإشراف الهندسي" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-purple-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                جودة مضمونة
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shrink-0 shadow-lg shadow-purple-500/20">
+                                <i data-lucide="eye" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-purple-600 transition-colors">الإشراف الهندسي</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">متابعة دقيقة للتنفيذ</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>إشراف معماري وإنشائي</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>إشراف داخلي وديكور</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تقارير دورية وضبط جودة</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-purple-500 hover:text-purple-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. الأعمال المساحية -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="500">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-indigo-400 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="الأعمال المساحية" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                دقة عالية
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-500 to-indigo-600 flex items-center justify-center shrink-0 shadow-lg shadow-primary-500/20">
+                                <i data-lucide="map" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-indigo-600 transition-colors">الأعمال المساحية</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">بأحدث التقنيات</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>مساحة الأراضي والمباني</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تسوية المناسيب والتضاريس</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>خرائط كادسترالية رقمية</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-primary-500 hover:text-indigo-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. التصميم الداخلي والتصوير ثلاثي الأبعاد -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="550">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-pink-400 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-pink-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="التصميم الداخلي والتصوير ثلاثي الأبعاد" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-pink-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                واقع افتراضي
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shrink-0 shadow-lg shadow-pink-500/20">
+                                <i data-lucide="layout" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-pink-600 transition-colors">التصميم الداخلي والتصوير ثلاثي الأبعاد</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">رؤية واقعية قبل التنفيذ</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصاميم داخلية عصرية</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصوير ثلاثي الأبعاد احترافي</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>عروض افتراضية تفاعلية</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-pink-500 hover:text-pink-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. تصميم المراكز التجارية -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="600">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-amber-400 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تصميم المراكز التجارية" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                تجاري متميز
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/20">
+                                <i data-lucide="shopping-bag" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-amber-600 transition-colors">تصميم المراكز التجارية</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">مساحات تجارية جذابة</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>توزيع مساحات المحلات</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تصميم واجهات جذابة</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>مواقف سيارات ومرافق</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-amber-500 hover:text-amber-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. تراخيص البلدية والدفاع المدني -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="650">
+                <div class="relative bg-white rounded-3xl p-6 border-2 border-gray-100 hover:border-cyan-400 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تراخيص البلدية والدفاع المدني" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 bg-cyan-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                تراخيص معتمدة
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center shrink-0 shadow-lg shadow-cyan-500/20">
+                                <i data-lucide="building" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-lg font-black text-dark mb-1 group-hover:text-cyan-600 transition-colors">تراخيص البلدية والدفاع المدني</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">إجراءات سريعة وموثوقة</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-sm">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>تراخيص بلدية وإتمام</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>موافقات الدفاع المدني</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                <span>شهادات إتمام البناء</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="tel:0560056055" class="inline-flex items-center gap-2 text-cyan-500 hover:text-cyan-600 text-sm font-bold transition-all group/link">
+                                <span>تفاصيل الخدمة</span>
+                                <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. فرز الوحدات السكنية - Full Width Card -->
+            <div class="lg:col-span-3" data-aos="fade-up" data-aos-delay="700">
+                <div class="group relative bg-gradient-to-r from-gray-50 to-white rounded-3xl p-6 border-2 border-gray-200 hover:border-primary-300 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl"></div>
+                    <div class="grid md:grid-cols-4 gap-6 items-center">
+                        <div class="md:col-span-1">
+                            <div class="relative h-48 rounded-2xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                     alt="فرز الوحدات السكنية" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                                <div class="absolute bottom-3 right-3 bg-primary-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                    خدمة مميزة
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-3">
+                            <div class="flex items-start gap-4">
+                                <div class="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-lg shadow-primary-500/20">
+                                    <i data-lucide="grid" class="w-7 h-7 text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-black text-dark mb-1 group-hover:text-primary-500 transition-colors">فرز الوحدات السكنية</h3>
+                                    <p class="text-gray-500 text-sm leading-relaxed">تقسيم وفرز الوحدات السكنية وفق الأنظمة المعتمدة</p>
+                                    <div class="grid sm:grid-cols-3 gap-3 mt-3">
+                                        <div class="flex items-center gap-2 text-gray-600 text-sm">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                            <span>فرز الأراضي السكنية</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-gray-600 text-sm">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                            <span>تقسيم الوحدات</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-gray-600 text-sm">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                            <span>إجراءات التسجيل العقاري</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 pt-3 border-t border-gray-100">
+                                        <a href="tel:0560056055" class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 text-sm font-bold transition-all group/link">
+                                            <span>تفاصيل الخدمة</span>
+                                            <i data-lucide="arrow-left" class="w-4 h-4 group-hover/link:-translate-x-1 transition-transform"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16" data-aos="fade-up">
+            <div class="text-center bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all hover:shadow-lg">
+                <span class="block text-4xl font-black text-primary-500">13</span>
+                <span class="text-sm text-gray-500 font-bold">خدمة متخصصة</span>
+            </div>
+            <div class="text-center bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all hover:shadow-lg">
+                <span class="block text-4xl font-black text-primary-500">25+</span>
+                <span class="text-sm text-gray-500 font-bold">سنة خبرة</span>
+            </div>
+            <div class="text-center bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all hover:shadow-lg">
+                <span class="block text-4xl font-black text-primary-500">320</span>
+                <span class="text-sm text-gray-500 font-bold">مشروع منجز</span>
+            </div>
+            <div class="text-center bg-gray-50 rounded-3xl p-6 border border-gray-100 hover:border-primary-200 transition-all hover:shadow-lg">
+                <span class="block text-4xl font-black text-primary-500">98%</span>
+                <span class="text-sm text-gray-500 font-bold">رضا العملاء</span>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="relative mt-16" data-aos="fade-up">
+            <div class="relative bg-gradient-to-r from-primary-500/10 via-accent-500/10 to-primary-500/10 rounded-3xl p-10 text-center border border-gray-200 overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-60 h-60 bg-primary-500/5 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-accent-500/5 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10">
+                    <h3 class="text-2xl md:text-3xl font-black text-dark mb-3">
+                        جاهز لبدء مشروعك الهندسي؟
+                    </h3>
+                    <p class="text-gray-500 max-w-2xl mx-auto mb-6">
+                        فريق من الخبراء ينتظرك لتقديم استشارة مجانية
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#contact" class="group inline-flex items-center gap-3 bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-2xl font-bold transition-all shadow-xl shadow-primary-500/30">
+                            <span>اطلب استشارة مجانية</span>
+                            <i data-lucide="chevron-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#portfolio" class="group inline-flex items-center gap-3 bg-gray-100 hover:bg-gray-200 text-dark px-8 py-3 rounded-2xl font-bold transition-all">
+                            <span>شاهد أعمالنا</span>
+                            <i data-lucide="grid" class="w-5 h-5 group-hover:rotate-90 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1253,7 +1850,7 @@
                                 <p class="text-gray-500 text-sm">حي المحمدية - الدمام</p>
                             </div>
                             <div class="flex gap-2">
-                                <a href="tel:+966500000001" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                <a href="tel:05600560551" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </a>
                                 <a href="https://maps.app.goo.gl/eRQ4MPtFVhL1QQ1k7?g_st=ic" 
@@ -1321,7 +1918,7 @@
                                 <p class="text-gray-500 text-sm">حي النسيم - المويه</p>
                             </div>
                             <div class="flex gap-2">
-                                <a href="tel:+966500000002" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                <a href="tel:05600560552" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </a>
                                 <a href="https://maps.app.goo.gl/WKMaHk6KbuimYz1RA?g_st=ic" 
@@ -1387,7 +1984,7 @@
                                 <p class="text-gray-500 text-sm">حي الشوقية - مكة المكرمة</p>
                             </div>
                             <div class="flex gap-2">
-                                <a href="tel:+966500000003" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                <a href="tel:05600560553" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </a>
                                 <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.4219489,39.8281074,14.83z/data=!4m6!3m5!1s0x15c21b003a17b363:0x3651811f8fe48e04!8m2!3d21.3794378!4d39.8012064!16s%2Fg%2F11m63z44c4!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
@@ -1453,7 +2050,7 @@
                                 <p class="text-gray-500 text-sm">حي السلامة - الطائف</p>
                             </div>
                             <div class="flex gap-2">
-                                <a href="tel:+966500000004" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
+                                <a href="tel:0560056055" class="w-10 h-10 rounded-xl bg-primary-50 hover:bg-primary-500 hover:text-white flex items-center justify-center text-primary-500 transition-all duration-300">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </a>
                                 <a href="https://www.google.com/maps/place/%D9%85%D9%83%D8%AA%D8%A8+%D8%A7%D9%84%D9%88%D8%B0%D9%8A%D9%86%D8%A7%D9%86%D9%8A+%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%E2%80%AD/@21.2726205,40.3959175,15.07z/data=!4m6!3m5!1s0x15e98f89f886483b:0x3aaf0fe95998db56!8m2!3d21.2716741!4d40.4022123!16s%2Fg%2F11fk407255?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
@@ -1483,7 +2080,7 @@
                 <div class="flex items-center gap-2">
                     <i data-lucide="phone" class="w-5 h-5 text-primary-500"></i>
                     <span class="text-dark font-bold">للاستفسار:</span>
-                    <a href="tel:+966500000000" class="text-primary-500 font-bold hover:text-primary-600 transition-colors">+966 50 000 0000</a>
+                    <a href="tel:05600560550" class="text-primary-500 font-bold hover:text-primary-600 transition-colors">0560056055</a>
                 </div>
                 <div class="w-px h-8 bg-gray-300"></div>
                 <div class="flex items-center gap-2">
@@ -1596,9 +2193,7 @@
 
                                 
 
-                                <a href="https://www.linkedin.com/posts/al-fashne-digital-marketing-agency_%D8%A7%D9%84%D9%81%D8%B1%D8%AD%D8%A9-%D9%84%D9%85%D8%A7-%D8%AA%D9%83%D9%88%D9%86-%D8%A8%D8%A7%D8%B3%D9%85-%D9%85%D8%B5%D8%B1%D9%84%D9%8A%D9%87%D8%A7-%D8%B7%D8%B9%D9%85-%D9%85%D8%AE%D8%AA%D9%84%D9%81-activity-7479123327463309313-2cfb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZku_4BwiYCZo6uSnesfu8T2PiJamq58S8" class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary-500 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-500/30">
-                                    <i class="fa-brands fa-linkedin-in text-lg"></i>
-                                </a>
+                                
 
                                 
                             </div>
@@ -1710,8 +2305,8 @@
         </div>
         <div>
             <span class="block text-xs text-gray-500">هاتف</span>
-            <a href="tel:+966500000000" class="font-bold hover:text-primary-400 transition-colors">
-                +966 50 000 0000
+            <a href="tel:05600560550" class="font-bold hover:text-primary-400 transition-colors">
+                0560056055
             </a>
         </div>
     </li>
@@ -1735,7 +2330,44 @@
         <div>
             <span class="block text-xs text-gray-500">العنوان</span>
             <span class="font-bold">الدمام - حي المحمدية</span>
+            
         </div>
+
+    </li>
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-location-dot text-primary-500 text-lg"></i>
+        </div>
+        <div>
+           
+            <span class="font-bold"> حي النسيم  - المويه </span>
+            
+        </div>
+
+            
+           
+    </li>
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-location-dot text-primary-500 text-lg"></i>
+        </div>
+        <div>
+           
+          <span class="font-bold">  مكة المكرمة -حي الشوقية </span>
+            
+        </div>
+
+    </li>
+    <li class="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+        <div class="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-primary-500/20 flex items-center justify-center shrink-0 transition-all">
+            <i class="fa-solid fa-location-dot text-primary-500 text-lg"></i>
+        </div>
+        <div>
+          
+           <span class="font-bold">الطائف  - حي السلامة</span>
+            
+        </div>
+
     </li>
 </ul>
 
