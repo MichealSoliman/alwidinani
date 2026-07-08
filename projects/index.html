@@ -54,6 +54,10 @@
         body {
             font-family: 'Cairo', sans-serif;
         }
+        html,
+        body{
+            overflow-x:hidden;
+        }
 
         .glass-nav {
             background: rgba(255, 255, 255, 0.8);
@@ -136,41 +140,70 @@
 </head>
 
 <body class="bg-slate-50 text-gray-800 leading-relaxed overflow-x-hidden">
+<!-- Floating Contact Buttons -->
+<div class="fixed bottom-6 left-6 z-[9999] flex flex-col gap-4">
 
+    <!-- Call -->
+    <a href="tel:0560056055"
+        class="group w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        aria-label="اتصل بنا">
+
+        <i data-lucide="phone-call" class="w-6 h-6 text-white"></i>
+
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/966560056055"
+        target="_blank"
+        class="group w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1EBE5B] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        aria-label="واتساب">
+
+        <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:info@example.com"
+        class="group w-14 h-14 rounded-full bg-primary-500 hover:bg-primary-600 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        aria-label="البريد الإلكتروني">
+
+        <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+
+    </a>
+
+</div>
     <!-- Header & Navigation -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4">
         <div class="container mx-auto px-4 md:px-6">
-            <nav
-                class="glass-nav rounded-2xl shadow-lg border border-white/20 flex items-center justify-between px-6 py-3">
-                <div class="flex items-center gap-3">
+            <nav class="glass-nav rounded-2xl shadow-lg border border-white/20 flex items-center justify-between px-3 sm:px-5 lg:px-6 py-3">
+                <div class="flex items-center gap-3 min-w-0">
                     <div class="bg-primary-500 p-2 rounded-xl text-white shadow-lg shadow-primary-500/30">
-                        <img src="../img/Artboard 1.png" alt="" class="w-16 h-16 object-contain">
+                        <img
+                            src="../img/Artboard 1.png"
+                            class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain"
+                        >
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-xl font-extrabold text-dark tracking-tight">مكتب الوذيناني</span>
-                        <span class="text-[10px] font-bold text-primary-500 uppercase tracking-widest -mt-1">للاستشارات
-                            الهندسية</span>
+                    <div class="flex flex-col min-w-0">
+                        <span class="text-base sm:text-lg lg:text-xl font-extrabold text-dark truncate">مكتب الوذيناني</span>
+                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-500 truncate">للاستشارات الهندسية</span>
                     </div>
                 </div>
 
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center gap-8 font-bold text-sm text-gray-600">
-                    <li><a href="../index.html" class="nav-link hover:text-primary-500 transition">الرئيسية</a></li>
+                    <li><a href="../index.html" class="nav-link  hover:text-primary-500 transition">الرئيسية</a></li>
                     <li><a href="../about/" class="nav-link hover:text-primary-500 transition">من نحن</a></li>
                     <li><a href="../services/" class="nav-link hover:text-primary-500 transition">خدماتنا</a></li>
-                    <li><a href="#" class="nav-link active-link  hover:text-primary-500 transition">مشاريعنا</a></li>
-
+                    <li><a href="#" class="nav-link hover:text-primary-500 transition active-link">مشاريعنا</a></li>
                     <li><a href="../contact/" class="nav-link hover:text-primary-500 transition">اتصل بنا</a></li>
                 </ul>
 
                 <div class="flex items-center gap-4">
-                    <a href="#contact"
-                        class="hidden md:flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-primary-500/40">
+                    <a href="tel:0560056055" class="hidden md:flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-primary-500/40">
                         <span>اطلب استشارة</span>
                         <i data-lucide="arrow-left" class="w-4 h-4"></i>
                     </a>
-                    <button id="mobile-menu-btn"
-                        class="lg:hidden text-dark p-2 hover:bg-gray-100 rounded-lg transition">
+                    <button id="mobile-menu-btn" class="lg:hidden text-dark p-2 hover:bg-gray-100 rounded-lg transition">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -179,7 +212,7 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden fixed inset-0 bg-dark/60 backdrop-blur-sm z-50">
-            <div class="absolute top-0 right-0 h-full w-3/4 bg-white shadow-2xl p-8 flex flex-col">
+            <div class="absolute top-0 right-0 h-full w-[300px] max-w-[85vw] bg-white shadow-2xl p-8 flex flex-col">
                 <div class="flex items-center justify-between mb-12">
                     <span class="text-xl font-bold text-dark">القائمة</span>
                     <button id="close-menu-btn" class="text-gray-500 p-2 hover:bg-gray-100 rounded-lg">
@@ -190,19 +223,15 @@
                     <li><a href="../index.html" class="mobile-nav-link">الرئيسية</a></li>
                     <li><a href="../about/" class="mobile-nav-link">من نحن</a></li>
                     <li><a href="../services/" class="mobile-nav-link">خدماتنا</a></li>
-                    <li><a href="../projects/" class="mobile-nav-link">مشاريعنا</a></li>
-
+                    <li><a href="#" class="mobile-nav-link">مشاريعنا</a></li>
                     <li><a href="../contact/" class="mobile-nav-link text-primary-500">تواصل معنا</a></li>
                 </ul>
                 <div class="mt-auto pt-8 border-t">
                     <p class="text-sm text-gray-500 mb-4">تابعنا على:</p>
                     <div class="flex gap-4">
-                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="instagram"
-                                class="w-5 h-5"></i></a>
-                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="twitter"
-                                class="w-5 h-5"></i></a>
-                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="facebook"
-                                class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-gray-100 rounded-lg text-primary-500"><i data-lucide="facebook" class="w-5 h-5"></i></a>
                     </div>
                 </div>
             </div>
@@ -210,7 +239,7 @@
     </header>
 
     <!-- Projects Hero Section -->
-    <section id="projects-hero" class="min-h-[80vh] flex items-center pt-20 relative overflow-hidden">
+    <section id="projects-hero" class="min-h-[100vh] flex items-center pt-20 relative overflow-hidden">
         <!-- Background Slideshow -->
         <div class="absolute inset-0 z-0">
             <div id="projectsSlider" class="w-full h-full relative">
@@ -253,7 +282,7 @@
         </div>
 
         <!-- Content -->
-        <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="container mx-auto px-4 mt-6 py-6 md:px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <!-- Breadcrumb -->
                 <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full text-white/80 text-sm mb-8"
@@ -264,7 +293,7 @@
                 </div>
 
                 <!-- Title -->
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-6"
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] mb-6"
                     data-aos="fade-up" data-aos-delay="100">
                     <span class="text-primary-500">إبداعاتنا</span>
                     <br class="hidden sm:block">
@@ -339,12 +368,12 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-wrap justify-center gap-4 mt-10" data-aos="fade-up" data-aos-delay="600">
-                    <a href="#gallery"
+                    <a href="#"
                         class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary-500/30 flex items-center gap-2 group">
                         <span>استعرض مشاريعنا</span>
                         <i data-lucide="grid" class="w-5 h-5 group-hover:rotate-90 transition-transform"></i>
                     </a>
-                    <a href="#contact"
+                    <a href="tel:0560056055"
                         class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all flex items-center gap-2">
                         <span>نفذ مشروعك معنا</span>
                         <i data-lucide="phone" class="w-5 h-5"></i>
@@ -2385,7 +2414,7 @@
                 <div data-aos="fade-right">
                     <span class="text-primary-500 font-bold text-sm uppercase tracking-[0.3em] mb-4 block">آراء
                         العملاء</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-dark mb-8">شركاء النجاح <br> يتحدثون عن تجربتهم</h2>
+                    <h2 class="text-2xl md:text-4xl font-black text-dark mb-8">شركاء النجاح <br> يتحدثون عن تجربتهم</h2>
                     <p class="text-gray-500 text-lg mb-10">نفخر بثقة عملائنا التي بنيناها على مدار سنوات من العمل الجاد
                         والالتزام بالتميز.</p>
                     <div class="flex gap-4">
@@ -2793,7 +2822,7 @@
 
     <!-- Back to top -->
     <button id="back-to-top"
-        class="fixed bottom-8 left-8 w-14 h-14 bg-primary-500 text-white rounded-2xl shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-primary-600">
+        class="fixed bottom-8 right-8 w-14 h-14 bg-primary-500 text-white rounded-2xl shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-primary-600">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
 

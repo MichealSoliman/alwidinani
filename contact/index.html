@@ -48,6 +48,10 @@
 
     <style>
         body { font-family: 'Cairo', sans-serif; }
+        html,
+        body{
+            overflow-x:hidden;
+        }
         .glass-nav {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
@@ -102,7 +106,38 @@
     </style>
 </head>
 <body class="bg-slate-50 text-gray-800 leading-relaxed overflow-x-hidden">
+<!-- Floating Contact Buttons -->
+<div class="fixed bottom-6 left-6 z-[9999] flex flex-col gap-4">
 
+    <!-- Call -->
+    <a href="tel:0560056055"
+        class="group w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        aria-label="اتصل بنا">
+
+        <i data-lucide="phone-call" class="w-6 h-6 text-white"></i>
+
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/966560056055"
+        target="_blank"
+        class="group w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1EBE5B] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        aria-label="واتساب">
+
+        <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:info@example.com"
+        class="group w-14 h-14 rounded-full bg-primary-500 hover:bg-primary-600 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        aria-label="البريد الإلكتروني">
+
+        <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+
+    </a>
+
+</div>
     <!-- Header & Navigation -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4">
         <div class="container mx-auto px-4 md:px-6">
@@ -167,7 +202,7 @@
     </header>
 
 <!-- Contact Hero Section -->
-<section id="contact-hero" class="min-h-[80vh] flex items-center pt-20 relative overflow-hidden">
+<section id="contact-hero" class="min-h-[100vh] flex items-center pt-20 py-6 relative overflow-hidden">
     <!-- Background -->
     <div class="absolute inset-0 z-0">
         <!-- Static Background Image -->
@@ -194,7 +229,7 @@
     </div>
 
     <!-- Content -->
-    <div class="container mx-auto px-4 md:px-6 relative z-10">
+    <div class="container mx-auto mt-8 py-6 px-4 md:px-6 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
             <!-- Breadcrumb -->
             <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full text-white/80 text-sm mb-8" data-aos="fade-up">
@@ -204,7 +239,7 @@
             </div>
 
             <!-- Title -->
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-6" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-6" data-aos="fade-up" data-aos-delay="100">
                 <span class="text-accent">تواصل</span> معنا
                 <br class="hidden sm:block">
                 <span class="text-white">نحن هنا لخدمتك</span>
@@ -1409,7 +1444,7 @@
 </footer>
 
     <!-- Back to top -->
-    <button id="back-to-top" class="fixed bottom-8 left-8 w-14 h-14 bg-primary-500 text-white rounded-2xl shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-primary-600">
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 bg-primary-500 text-white rounded-2xl shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 z-50 hover:bg-primary-600">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
 
